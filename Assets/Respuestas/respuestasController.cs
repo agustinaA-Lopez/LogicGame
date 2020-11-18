@@ -25,19 +25,24 @@ bool click;
         
     }
 Vector3 control;
-    //The mesh goes red when the mouse is over it...
+    //The mesh fades of when the mouse is over it...
     void OnMouseDown()
     {
-    
+        
        if (!ButtonController.use) {startAngle = getAngle() - transform.rotation.eulerAngles.z;
-       // padre.transform.Rotate(0,0,60);
+      
        }
     }
 
     
     void OnMouseDrag()
     {
+
+        // mueve la rueda llamando a la funcion getAngle().
+        // para no confundir boton con rueda usamos  ButtonControoller.use
+
         if (!ButtonController.use){
+       
         //play sound on turning weel
         if (!GetComponent<AudioSource>().isPlaying && Input.mousePosition!=control) GetComponent<AudioSource>().Play();
              
@@ -62,6 +67,7 @@ Vector3 control;
     private float startAngle;
  
 
+// funcion para rotacion de la rueda
 float getAngle(){
         worldMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
@@ -75,6 +81,7 @@ float getAngle(){
         return angle;
     }
 
+//crea las respuestas segun Maincontroller.nivel
 void Respuesta()
 {
 switch (MainController.nivel)

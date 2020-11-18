@@ -15,6 +15,9 @@ public class ventanaController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //La ventana chequea si el objeto con el que interactua es tag "rightAnswer" or "wrongAnswer"
+
         SpriteRenderer mySR = GetComponent<SpriteRenderer>();
 
         foreach (GameObject rigthAnswer in GameObject.FindGameObjectsWithTag("rightAnswer"))
@@ -28,8 +31,6 @@ public class ventanaController : MonoBehaviour
             }
         } 
 
-       
-
             foreach (GameObject wrongAnswer in GameObject.FindGameObjectsWithTag("wrongAnswer"))
             {
                 SpriteRenderer wrongAnswerSR = wrongAnswer.GetComponent<SpriteRenderer>();
@@ -37,7 +38,7 @@ public class ventanaController : MonoBehaviour
 
                 if (mySR.bounds.Intersects(wrongAnswerSR.bounds) && MainController.wheelButton)
                 {
-                    Debug.Log("wrong Answer");
+                    // destruye la respuesta errada si hacemos click en el wheelButton
                     Destroy(wrongAnswer);
                     MainController.wheelButton = false;
                     MainController.rightAnswer = false;

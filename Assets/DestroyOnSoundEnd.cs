@@ -13,6 +13,7 @@ public class DestroyOnSoundEnd : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //espera a terminar de reproducir sonido para destruir objeto
         if (!gameObject.GetComponent<AudioSource>().isPlaying){
             Destroy(gameObject); 
         }

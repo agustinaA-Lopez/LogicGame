@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    public GameObject inicioObj, level1Obj, playButtonObj, circuloObj, checkObj, level2Obj,level3Obj,level4Obj, mask;
+    public GameObject inicioObj, level1Obj, playButtonObj, circuloObj, checkObj, level2Obj,level3Obj,level4Obj, mask, fondoObj;
     public static bool playbutton, wheelButton, rightAnswer;
     public static int nivel, respuesta;
     public static float tiempo;
     //public static int nivel;
-    private GameObject inicio, playButton, circulo, check, level, ventana;
+    private GameObject inicio, playButton, circulo, check, level, ventana, fondo;
 
     public static float tiempoRespuesta = 30;
 
@@ -30,7 +30,7 @@ public class MainController : MonoBehaviour
     void Update()
     {
         
-        
+        // Controla los niveles. Destruye e instancia en funcion del nivel
         if ( wheelButton && rightAnswer) {
            
             Destroy(level);
@@ -40,17 +40,18 @@ public class MainController : MonoBehaviour
             nivel ++;
             Level();
             
+            fondo = Instantiate(fondoObj);
             ventana = Instantiate(mask);
             circulo = Instantiate(circuloObj);
             check = Instantiate(checkObj); 
             wheelButton= false;
             rightAnswer = false; 
-            //Debug.Log(nivel);
+
         } 
 
     
 
-        // Timer
+        // Timer (en proceso ...)
 
         tiempoRespuesta -= Time.deltaTime;
        // scoreObj.GetComponent<TMPro.TextMeshProUGUI>().text = score.ToString(); 
@@ -72,6 +73,8 @@ public class MainController : MonoBehaviour
 
 
     }
+
+    //Controla los niveles
  void Level(){
  switch (nivel)
     {
