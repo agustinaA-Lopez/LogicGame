@@ -28,8 +28,10 @@ Vector3 control;
     //The mesh fades of when the mouse is over it...
     void OnMouseDown()
     {
-        
-       if (!ButtonController.use) {startAngle = getAngle() - transform.rotation.eulerAngles.z;
+         // para no confundir boton con rueda usamos  ButtonControoller.use
+         // ubica la posicion del angulo de la rueda
+    
+        if (!ButtonController.use) {startAngle = getAngle() - transform.rotation.eulerAngles.z;
       
        }
     }
@@ -39,7 +41,7 @@ Vector3 control;
     {
 
         // mueve la rueda llamando a la funcion getAngle().
-        // para no confundir boton con rueda usamos  ButtonControoller.use
+        
 
         if (!ButtonController.use){
        
@@ -81,7 +83,9 @@ float getAngle(){
         return angle;
     }
 
-//crea las respuestas segun Maincontroller.nivel
+
+
+//Instancia las respuestas segun Maincontroller.nivel
 void Respuesta()
 {
 switch (MainController.nivel)

@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1350
     height: 680
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_MinSize: {x: 577, y: 471}
   m_MaxSize: {x: 12002, y: 14042}
   vertical: 0
-  controlID: 29
+  controlID: 143
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +149,7 @@ MonoBehaviour:
     y: 0
     width: 1350
     height: 680
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 577, y: 471}
   m_MaxSize: {x: 12002, y: 14042}
   vertical: 1
-  controlID: 30
+  controlID: 144
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 577, y: 200}
   m_MaxSize: {x: 12002, y: 4021}
   vertical: 0
-  controlID: 31
+  controlID: 145
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -433,21 +433,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Images
+    - Assets/Respuestas
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Images
+  - Assets/Respuestas
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\NuevoJuego\LogicGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 39}
-    m_SelectedIDs: d83d0000
-    m_LastClickedID: 15832
-    m_ExpandedIDs: 00000000ca3d0000cc3d0000ce3d000000ca9a3b
+    m_SelectedIDs: da3d0000
+    m_LastClickedID: 15834
+    m_ExpandedIDs: 00000000d83d0000da3d0000dc3d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -475,7 +475,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ca3d0000cc3d0000ce3d0000
+    m_ExpandedIDs: 00000000d83d0000da3d0000dc3d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -563,7 +563,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 1065
   m_AssetGUID: 
   m_InstanceID: 0
   m_LockTracker:
@@ -597,9 +597,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0c3e0000
+      m_SelectedIDs: 883c0000
       m_LastClickedID: 0
-      m_ExpandedIDs: b2e8ffff30e9ffff2c4c0000
+      m_ExpandedIDs: 6af7ffff924a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1080, y: 2160}
+  m_TargetSize: {x: 844, y: 317}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -669,10 +669,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -540
-    m_HBaseRangeMax: 540
-    m_VBaseRangeMin: -1080
-    m_VBaseRangeMax: 1080
+    m_HBaseRangeMin: -422
+    m_HBaseRangeMax: 422
+    m_VBaseRangeMin: -158.5
+    m_VBaseRangeMax: 158.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -692,7 +692,7 @@ MonoBehaviour:
       y: 21
       width: 844
       height: 317
-    m_Scale: {x: 0.14675926, y: 0.14675926}
+    m_Scale: {x: 1, y: 1}
     m_Translation: {x: 422, y: 158.5}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -700,12 +700,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -2875.4575
-      y: -1080
-      width: 5750.915
-      height: 2160
+      x: -422
+      y: -158.5
+      width: 844
+      height: 317
     m_MinimalGUI: 1
-  m_defaultScale: 0.14675926
+  m_defaultScale: 1
   m_LastWindowPixelSize: {x: 844, y: 338}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
