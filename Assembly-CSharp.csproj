@@ -57,11 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ventanaController.cs" />
+    <Compile Include="Assets\Buttons\MenuButtonController.cs" />
     <Compile Include="Assets\DestroyOnSoundEnd.cs" />
     <Compile Include="Assets\Buttons\ButtonController.cs" />
     <Compile Include="Assets\MainController.cs" />
     <Compile Include="Assets\Respuestas\respuestasController.cs" />
-    <Compile Include="Assets\Buttons\MenuButtonController.cs" />
+    <Compile Include="Assets\Textos\Tiempo.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

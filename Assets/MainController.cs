@@ -13,7 +13,7 @@ public class MainController : MonoBehaviour
 
     public static float tiempoRespuesta = 30;
 
-    public GameObject timeObj;
+    //public GameObject timeObj;
     public static int vidas=10;
     
     // Start is called before the first frame update
@@ -78,7 +78,7 @@ public class MainController : MonoBehaviour
 
         // Timer (en proceso ...)
 
-        tiempoRespuesta -= Time.deltaTime;
+    /*    tiempoRespuesta -= Time.deltaTime;
        // scoreObj.GetComponent<TMPro.TextMeshProUGUI>().text = score.ToString(); 
         timeObj.GetComponent<TMPro.TextMeshProUGUI>().text = "Tiempo: " + ((int)tiempoRespuesta).ToString();
         if ((int)tiempoRespuesta == 0) tiempoRespuesta = 30;
@@ -94,7 +94,7 @@ public class MainController : MonoBehaviour
         // {
         //     Credito.GetComponent<TextMesh>().text = "Credits: " + vidas;
 
-        // }
+        // }*/
 
 
     }
