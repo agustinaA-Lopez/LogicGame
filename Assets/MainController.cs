@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    public GameObject inicioObj, level1Obj, playButtonObj, circuloObj, checkObj, level2Obj,level3Obj,level4Obj, mask, fondoObj, MenuButtonObj, Menu;
+    public GameObject inicioObj, level1Obj, playButtonObj, circuloObj, checkObj, level2Obj,level3Obj,level4Obj, mask, fondoObj, MenuButtonObj, Menu, HelpButtonObj;
     public static bool playbutton, wheelButton, rightAnswer;
     public static int nivel, respuesta;
     public static float tiempo;
@@ -39,6 +39,7 @@ public class MainController : MonoBehaviour
             Destroy(playButton);
             Destroy(check);
             Destroy(MenuButton);
+            Destroy(HelpButtonObj);
             //Destroy(inicioObj);
             //nivel++;
             // Level();
@@ -47,6 +48,7 @@ public class MainController : MonoBehaviour
             //ventana = Instantiate(mask);
             //circulo = Instantiate(circuloObj);
             //check = Instantiate(checkObj);
+
             Instantiate(Menu);
             wheelButton = false;
             rightAnswer = false;
@@ -64,7 +66,8 @@ public class MainController : MonoBehaviour
             Destroy(MenuButton);
             nivel ++;
             Level();
-            
+
+            Instantiate(HelpButtonObj);
             fondo = Instantiate(fondoObj);
             ventana = Instantiate(mask);
             circulo = Instantiate(circuloObj);
