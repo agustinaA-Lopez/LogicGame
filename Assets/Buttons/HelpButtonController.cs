@@ -19,8 +19,29 @@ public class HelpButtonController : MonoBehaviour
         use = false;
 
     }
+     void Update()
+    {
 
 
+        if ((int)Tiempo.tiempoRespuesta == 25)
+        {
+            SpriteRenderer mySR = GetComponent<SpriteRenderer>();
+
+            foreach (GameObject wrongAnswer in GameObject.FindGameObjectsWithTag("wrongAnswer"))
+            {
+
+                SpriteRenderer wrongAnswerSR = wrongAnswer.GetComponent<SpriteRenderer>();
+
+
+                Destroy(wrongAnswer);
+
+                Tiempo.tiempoRespuesta = 30;
+                MainController.wheelButton = false;
+                MainController.rightAnswer = false;
+                break;
+            }
+        }
+    }
     void OnMouseDown()
     {
 
@@ -36,9 +57,11 @@ public class HelpButtonController : MonoBehaviour
 
         foreach (GameObject wrongAnswer in GameObject.FindGameObjectsWithTag("wrongAnswer"))
         {
+
+
             SpriteRenderer wrongAnswerSR = wrongAnswer.GetComponent<SpriteRenderer>();
 
-
+            
            // Debug.Log("paso por aca");
 
 
