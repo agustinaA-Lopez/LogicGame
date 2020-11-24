@@ -6,8 +6,8 @@ public class Tiempo : MonoBehaviour
 {
     public static float tiempoRespuesta = 30;
 
-    //public GameObject Credito;
-    public static int vidas=10;
+    public GameObject Puntos;
+    public static int points=0;
 
 
     // Update is called once per frame
@@ -26,11 +26,11 @@ public class Tiempo : MonoBehaviour
             GetComponent<TextMesh>().text = "";
             tiempoRespuesta = 29;
         }
-       /* if (MainController.nivel > 0)
+        if (MainController.nivel > 0)
         {
-            Credito.GetComponent<TextMesh>().text = "Credits: " + vidas;
+            Puntos.GetComponent<TextMesh>().text = ((int)points). ToString();
 
-        }*/
+        }
 
 
 

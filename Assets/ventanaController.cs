@@ -28,6 +28,7 @@ public class ventanaController : MonoBehaviour
             {
                 MainController.rightAnswer = true;
                 Tiempo.tiempoRespuesta = 30;
+                Tiempo.points += 3;
         
             }
         } 
@@ -44,6 +45,7 @@ public class ventanaController : MonoBehaviour
                     Tiempo.tiempoRespuesta = 30;
                     MainController.wheelButton = false;
                     MainController.rightAnswer = false;
+                    Tiempo.points -= 2;
         } 
         }
       
