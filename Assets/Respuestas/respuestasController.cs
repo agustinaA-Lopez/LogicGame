@@ -60,7 +60,6 @@ Vector3 control;
         
         control  = Input.mousePosition;
 
-        Debug.Log(gameObject.transform.rotation.z);
         }
     }
 
@@ -90,8 +89,8 @@ void Respuesta()
 {
 switch (MainController.nivel)
     {
-        case 0:
-            break;
+        // case 0:
+        //     break;
 
         case 1: 
         for (int i = 0; i < 3; i++)
