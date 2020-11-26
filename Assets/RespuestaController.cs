@@ -1,7 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class respuestasController : MonoBehaviour
+public class RespuestaController : MonoBehaviour
 {
+  
     public static float z;
 
     public static bool move;
@@ -160,3 +163,4 @@ switch (MainController.nivel)
  }
 
 }
+
