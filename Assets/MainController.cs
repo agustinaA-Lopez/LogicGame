@@ -54,7 +54,7 @@ public class MainController : MonoBehaviour
         // Timer (en proceso ...)
 
         tiempoRespuesta -= Time.deltaTime;
-      
+       // scoreObj.GetComponent<TMPro.TextMeshProUGUI>().text = score.ToString(); 
         timeObj.GetComponent<TMPro.TextMeshProUGUI>().text = "Tiempo: " + ((int)tiempoRespuesta).ToString();
         if ((int)tiempoRespuesta == 0) tiempoRespuesta = 30;
         //if (Juego.respuesta != 0) tiempoRespuesta = 29;
