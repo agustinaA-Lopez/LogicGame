@@ -54,7 +54,11 @@ public class MainController : MonoBehaviour
         // Timer (en proceso ...)
 
         tiempoRespuesta -= Time.deltaTime;
+<<<<<<< HEAD
        // scoreObj.GetComponent<TMPro.TextMeshProUGUI>().text = score.ToString(); 
+=======
+      
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
         timeObj.GetComponent<TMPro.TextMeshProUGUI>().text = "Tiempo: " + ((int)tiempoRespuesta).ToString();
         if ((int)tiempoRespuesta == 0) tiempoRespuesta = 30;
         //if (Juego.respuesta != 0) tiempoRespuesta = 29;

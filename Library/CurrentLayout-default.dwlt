@@ -21,7 +21,15 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Game
   m_RootView: {fileID: 6}
+<<<<<<< HEAD
   m_MinSize: {x: 875, y: 542}
+=======
+<<<<<<< HEAD
+  m_MinSize: {x: 875, y: 300}
+=======
+  m_MinSize: {x: 875, y: 521}
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
+>>>>>>> 02561026366dee29ad99c284902ace2dbe9e79de
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -39,7 +47,11 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1047
+=======
+    x: 733
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
     y: 0
     width: 303
     height: 359
@@ -68,7 +80,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1350
+=======
+    width: 1008
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
     height: 630
   m_MinSize: {x: 577, y: 471}
   m_MaxSize: {x: 12002, y: 14042}
@@ -91,7 +107,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 201
+=======
+    width: 200
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
     height: 359
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
@@ -147,9 +167,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1350
     height: 680
+<<<<<<< HEAD
   m_MinSize: {x: 875, y: 542}
+=======
+  m_MinSize: {x: 875, y: 300}
+=======
+    width: 1008
+    height: 680
+  m_MinSize: {x: 875, y: 521}
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
+>>>>>>> 02561026366dee29ad99c284902ace2dbe9e79de
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -172,7 +202,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1350
+=======
+    width: 1008
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -197,7 +231,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 660
+<<<<<<< HEAD
     width: 1350
+=======
+    width: 1008
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -220,7 +258,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1350
+=======
+    width: 1008
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
     height: 630
   m_MinSize: {x: 577, y: 471}
   m_MaxSize: {x: 12002, y: 14042}
@@ -246,7 +288,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1350
+=======
+    width: 1008
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
     height: 359
   m_MinSize: {x: 577, y: 200}
   m_MaxSize: {x: 12002, y: 4021}
@@ -267,7 +313,11 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 201
+=======
+    x: 200
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
     y: 0
     width: 846
     height: 359
@@ -299,7 +349,11 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 209
+=======
+    x: 208
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
     y: 80
     width: 844
     height: 338
@@ -315,9 +369,21 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 0.027876914, y: -2.25, z: -0.22979231}
     speed: 2
     m_Value: {x: -0.13503052, y: -2.25, z: -0.2060191}
+=======
+<<<<<<< HEAD
+    m_Target: {x: 0, y: -2.25, z: -0.010000005}
+    speed: 2
+    m_Value: {x: 0, y: -2.25, z: -0.010000005}
+=======
+    m_Target: {x: -4.6149173, y: 0.15611091, z: -74.658455}
+    speed: 2
+    m_Value: {x: -4.6149173, y: 0.15611091, z: -74.658455}
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
+>>>>>>> 02561026366dee29ad99c284902ace2dbe9e79de
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -368,9 +434,21 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 6.305695
     speed: 2
     m_Value: 6.602822
+=======
+<<<<<<< HEAD
+    m_Target: 6.3565397
+    speed: 2
+    m_Value: 6.3565397
+=======
+    m_Target: 8.937823
+    speed: 2
+    m_Value: 8.937823
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
+>>>>>>> 02561026366dee29ad99c284902ace2dbe9e79de
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -433,12 +511,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Respuestas
+=======
+    - Assets/Images
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< HEAD
   - Assets/Respuestas
+=======
+  - Assets/Images
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\NuevoJuego\LogicGame
   m_LockTracker:
@@ -551,7 +637,11 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1055
+=======
+    x: 741
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
     y: 80
     width: 302
     height: 338
@@ -597,9 +687,21 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 9a4d0000
       m_LastClickedID: 19866
       m_ExpandedIDs: 98e5ffff9a4d0000
+=======
+<<<<<<< HEAD
+      m_SelectedIDs: 883c0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 6af7ffff924a0000
+=======
+      m_SelectedIDs: e2c9ffff
+      m_LastClickedID: -13854
+      m_ExpandedIDs: 6acaffff80caffff84caffffd0caffffe6caffffeacaffff24cbffff3acbfffff0cbffffc4e5ffffdae5ffff90e6ffff14f8ffff34fbffff
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
+>>>>>>> 02561026366dee29ad99c284902ace2dbe9e79de
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
