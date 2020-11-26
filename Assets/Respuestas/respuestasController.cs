@@ -60,7 +60,6 @@ Vector3 control;
         
         control  = Input.mousePosition;
 
-        //Debug.Log(gameObject.transform.rotation.z);
         }
     }
 
