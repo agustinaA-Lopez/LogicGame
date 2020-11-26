@@ -60,7 +60,10 @@ Vector3 control;
         
         control  = Input.mousePosition;
 
+<<<<<<< HEAD
         Debug.Log(gameObject.transform.rotation.z);
+=======
+>>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
         }
     }
 
