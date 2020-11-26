@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 4950810432286394033}
   - component: {fileID: 400280175366604220}
   - component: {fileID: 7353218349390656127}
-  - component: {fileID: 980800719103920580}
+  - component: {fileID: -5936294580111469499}
   m_Layer: 0
   m_Name: Circulo
   m_TagString: Untagged
@@ -363,7 +363,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &980800719103920580
+--- !u!114 &-5936294580111469499
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6949069833223495145}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61ac964454e329940b66b38a3b1ad833, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ddb27fe5c6df3f4a98c879723090312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 0}
