@@ -213,11 +213,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-<<<<<<< HEAD
   - {fileID: 639159866}
-=======
-  - {fileID: 1319976314}
->>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -309,11 +305,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &639159865
-=======
---- !u!1 &1319976313
->>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,39 +313,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 639159866}
   - component: {fileID: 639159868}
   - component: {fileID: 639159867}
   m_Layer: 5
   m_Name: Text (TMP)
-=======
-  - component: {fileID: 1319976314}
-  - component: {fileID: 1319976316}
-  - component: {fileID: 1319976315}
-  m_Layer: 5
-  m_Name: Timer
->>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!224 &639159866
-=======
---- !u!224 &1319976314
->>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 639159865}
-=======
-  m_GameObject: {fileID: 1319976313}
->>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -372,11 +348,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 639159865}
-=======
-  m_GameObject: {fileID: 1319976313}
->>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -465,11 +437,7 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 639159865}
-=======
-  m_GameObject: {fileID: 1319976313}
->>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
   m_CullTransparentMesh: 0
 --- !u!1 &1901897761
 GameObject:
@@ -674,11 +642,7 @@ MonoBehaviour:
   level4Obj: {fileID: 2607589548800234482, guid: e050ee1726df69c44af8b06513245b1f, type: 3}
   mask: {fileID: 6299841791601738997, guid: a194e4ec332ac5f4ca9e5233051a7310, type: 3}
   fondoObj: {fileID: 5270362983835038309, guid: a185662d7fa140a4298533f811f35fb0, type: 3}
-<<<<<<< HEAD
   timeObj: {fileID: 639159865}
-=======
-  timeObj: {fileID: 1319976313}
->>>>>>> parent of d36ec74... Merge branch 'main' of github.com:agustinaA-Lopez/LogicGame into main
 --- !u!4 &2027199789
 Transform:
   m_ObjectHideFlags: 0
