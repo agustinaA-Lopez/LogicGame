@@ -35,7 +35,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/new project.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -50,49 +50,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 114
-<<<<<<< HEAD
-      Script: {instanceID: 12976}
-    - Class: 114
-      Script: {instanceID: 14076}
-    - Class: 114
-      Script: {instanceID: 14096}
-    - Class: 114
-      Script: {instanceID: 14814}
-=======
-      Script: {instanceID: 12994}
-    - Class: 114
-      Script: {instanceID: 14092}
-    - Class: 114
-      Script: {instanceID: 14112}
-    - Class: 114
-      Script: {instanceID: 14830}
->>>>>>> e5499679a8dc22a147582844682d84c77850ae0d
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    Assets/new project.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
     - Class: 61
@@ -106,49 +63,39 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 11828}
+    - Class: 114
       Script: {instanceID: 11846}
     - Class: 114
-<<<<<<< HEAD
       Script: {instanceID: 12174}
     - Class: 114
       Script: {instanceID: 12918}
     - Class: 114
+      Script: {instanceID: 12976}
+    - Class: 114
       Script: {instanceID: 13416}
-=======
-      Script: {instanceID: 11864}
     - Class: 114
-      Script: {instanceID: 12192}
->>>>>>> e5499679a8dc22a147582844682d84c77850ae0d
+      Script: {instanceID: 13776}
     - Class: 114
-      Script: {instanceID: 12936}
+      Script: {instanceID: 13802}
     - Class: 114
-      Script: {instanceID: 13434}
+      Script: {instanceID: 14072}
     - Class: 114
-      Script: {instanceID: 13794}
+      Script: {instanceID: 14076}
     - Class: 114
-      Script: {instanceID: 13820}
+      Script: {instanceID: 14096}
     - Class: 114
-<<<<<<< HEAD
       Script: {instanceID: 14416}
-=======
-      Script: {instanceID: 14088}
     - Class: 114
-      Script: {instanceID: 14092}
->>>>>>> e5499679a8dc22a147582844682d84c77850ae0d
+      Script: {instanceID: 14520}
     - Class: 114
-      Script: {instanceID: 14432}
+      Script: {instanceID: 14814}
     - Class: 114
-<<<<<<< HEAD
       Script: {instanceID: 15030}
-=======
-      Script: {instanceID: 14536}
     - Class: 114
-      Script: {instanceID: 15046}
->>>>>>> e5499679a8dc22a147582844682d84c77850ae0d
+      Script: {instanceID: 15080}
     - Class: 114
-      Script: {instanceID: 15096}
-    - Class: 114
-      Script: {instanceID: 15176}
+      Script: {instanceID: 15160}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 123
@@ -704,6 +651,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
   - Assets/new project.unity
-  playerPath: C:/Users/carra/Desktop/otro.apk
+  playerPath: C:/LogicGameBackUp/LogicGame/LogicGame.apk
