@@ -13,6 +13,8 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -53,6 +55,7 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 12976}
     - Class: 114
       Script: {instanceID: 14076}
@@ -60,6 +63,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14096}
     - Class: 114
       Script: {instanceID: 14814}
+=======
+      Script: {instanceID: 12994}
+    - Class: 114
+      Script: {instanceID: 14092}
+    - Class: 114
+      Script: {instanceID: 14112}
+    - Class: 114
+      Script: {instanceID: 14830}
+>>>>>>> e5499679a8dc22a147582844682d84c77850ae0d
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -94,33 +106,49 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11828}
-    - Class: 114
       Script: {instanceID: 11846}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 12174}
     - Class: 114
       Script: {instanceID: 12918}
     - Class: 114
       Script: {instanceID: 13416}
+=======
+      Script: {instanceID: 11864}
     - Class: 114
-      Script: {instanceID: 13776}
+      Script: {instanceID: 12192}
+>>>>>>> e5499679a8dc22a147582844682d84c77850ae0d
     - Class: 114
-      Script: {instanceID: 13802}
+      Script: {instanceID: 12936}
     - Class: 114
-      Script: {instanceID: 14072}
+      Script: {instanceID: 13434}
     - Class: 114
-      Script: {instanceID: 14076}
+      Script: {instanceID: 13794}
     - Class: 114
+      Script: {instanceID: 13820}
+    - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 14416}
+=======
+      Script: {instanceID: 14088}
     - Class: 114
-      Script: {instanceID: 14520}
+      Script: {instanceID: 14092}
+>>>>>>> e5499679a8dc22a147582844682d84c77850ae0d
     - Class: 114
+      Script: {instanceID: 14432}
+    - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 15030}
+=======
+      Script: {instanceID: 14536}
     - Class: 114
-      Script: {instanceID: 15080}
+      Script: {instanceID: 15046}
+>>>>>>> e5499679a8dc22a147582844682d84c77850ae0d
     - Class: 114
-      Script: {instanceID: 15160}
+      Script: {instanceID: 15096}
+    - Class: 114
+      Script: {instanceID: 15176}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 123
@@ -678,4 +706,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
   - Assets/new project.unity
-  playerPath: C:/LogicGameBackUp/LogicGame/LogicGame.apk
+  playerPath: C:/Users/carra/Desktop/otro.apk
