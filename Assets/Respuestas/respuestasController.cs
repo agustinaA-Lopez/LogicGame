@@ -94,41 +94,41 @@ switch (MainController.nivel)
             break;
 
         case 1: 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 2; i++)
         {
             r1a = Instantiate(r1aObj);
             r1a.transform.SetParent(gameObject.transform);
-            gameObject.transform.Rotate(0,0,30f);
+            gameObject.transform.Rotate(0,0,45);
             r1b = Instantiate(r1bObj);
             r1b.transform.SetParent(gameObject.transform);
-            gameObject.transform.Rotate(0,0,30f);
+            gameObject.transform.Rotate(0,0,45);
             r1c = Instantiate(r1cObj);
             r1c.transform.SetParent(gameObject.transform);
             
-            gameObject.transform.Rotate(0,0,30f);
+            gameObject.transform.Rotate(0,0,45);
             r1d = Instantiate(r1dObj);
             r1d.transform.SetParent(gameObject.transform);
-           gameObject.transform.Rotate(0,0,30f);
+            gameObject.transform.Rotate(0,0,45);
         }
                         break;
 
 
         case 2:
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 2; i++)
         {
             r2a = Instantiate(r2aObj);
             r2a.transform.SetParent(gameObject.transform);
-            gameObject.transform.Rotate(0,0,30f);
+            gameObject.transform.Rotate(0,0,45f);
             r2b = Instantiate(r2bObj);
             r2b.transform.SetParent(gameObject.transform);
-            gameObject.transform.Rotate(0,0,30f);
+            gameObject.transform.Rotate(0,0,45f);
             r2c = Instantiate(r2cObj);
             r2c.transform.SetParent(gameObject.transform);
-            gameObject.transform.Rotate(0,0,30f);
+            gameObject.transform.Rotate(0,0,45f);
             
             r2d = Instantiate(r2dObj);
             r2d.transform.SetParent(gameObject.transform);
-           gameObject.transform.Rotate(0,0,30f);
+           gameObject.transform.Rotate(0,0,45f);
             
         }  
      

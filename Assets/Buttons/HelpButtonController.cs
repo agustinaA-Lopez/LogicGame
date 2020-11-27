@@ -7,6 +7,7 @@ public class HelpButtonController : MonoBehaviour
 
     bool click, answer;
     public GameObject clickOnSound;
+    private GameObject wrongAnswer;
     public static bool use;
 
     // GameObject pressedButton;
@@ -23,23 +24,23 @@ public class HelpButtonController : MonoBehaviour
     {
 
 
-        if ((int)Text.tiempoRespuesta == 1)
+        if ((int)Text.tiempoRespuesta <= 1)
         {
-            SpriteRenderer mySR = GetComponent<SpriteRenderer>();
+            //SpriteRenderer mySR = GetComponent<SpriteRenderer>();
             Text.points--;
-            foreach (GameObject wrongAnswer in GameObject.FindGameObjectsWithTag("wrongAnswer"))
-            {
+            wrongAnswer = GameObject.FindGameObjectWithTag("wrongAnswer");
+            // {
 
-                SpriteRenderer wrongAnswerSR = wrongAnswer.GetComponent<SpriteRenderer>();
+            //     SpriteRenderer wrongAnswerSR = wrongAnswer.GetComponent<SpriteRenderer>();
 
 
                 Destroy(wrongAnswer);
 
-                Text.tiempoRespuesta = 30;
-                MainController.wheelButton = false;
-                MainController.rightAnswer = false;
-                break;
-            }
+            //     Text.tiempoRespuesta = 30;
+            //     MainController.wheelButton = false;
+            //     MainController.rightAnswer = false;
+            //     break;
+            // }
         }
     }
     void OnMouseDown()
@@ -50,16 +51,16 @@ public class HelpButtonController : MonoBehaviour
         clickSound = Instantiate(clickOnSound);
         clickSound.GetComponent<AudioSource>().Play();
 
-        click = true;
+        //click = true;
 
         SpriteRenderer mySR = GetComponent<SpriteRenderer>();
 
 
-        foreach (GameObject wrongAnswer in GameObject.FindGameObjectsWithTag("wrongAnswer"))
-        {
+        wrongAnswer = GameObject.FindGameObjectWithTag("wrongAnswer");
+        // {
 
 
-            SpriteRenderer wrongAnswerSR = wrongAnswer.GetComponent<SpriteRenderer>();
+        //     SpriteRenderer wrongAnswerSR = wrongAnswer.GetComponent<SpriteRenderer>();
 
             
            // Debug.Log("paso por aca");
@@ -73,14 +74,14 @@ public class HelpButtonController : MonoBehaviour
                 Destroy(wrongAnswer);
 
                 Text.tiempoRespuesta = 30;
-                MainController.wheelButton = false;
-                MainController.rightAnswer = false;
-                Text.points--;
-                break;
+                // MainController.wheelButton = false;
+                // MainController.rightAnswer = false;
+                // Text.points--;
+                // break;
 
             
             //}
-        }
+        // }
 
 
 
@@ -89,7 +90,7 @@ public class HelpButtonController : MonoBehaviour
     void OnMouseEnter()
     {
         //cuando estamos sobre el boton avisamos que esta siendo usado
-        use = true;
+        //use = true;
         //ya explicamos rend para el fadeOff
         rend.material.color = Color.white;
     }
@@ -103,13 +104,13 @@ public class HelpButtonController : MonoBehaviour
         if (rend.material.color.r > .2) rend.material.color -= new Color(.01f, 0, 0) * Time.deltaTime * 120;
 
         // si ya hicimos click y se completo el proceso de fadeOff damos aviso a wheelButton que el boton fue presionado
-        if (rend.material.color.r <= .5F && click)
-        {
+       // if (rend.material.color.r <= .5F && click)
+        //{
 
            // MainController.wheelButton = true;
-            click = false;
+            //click = false;
 
-        }
+        //}
 
 
     }
@@ -118,7 +119,7 @@ public class HelpButtonController : MonoBehaviour
     void OnMouseExit()
     {
         rend.material.color = Color.white;
-        use = false;
+        //use = false;
 
     }
 

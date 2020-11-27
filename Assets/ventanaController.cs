@@ -27,7 +27,7 @@ public class ventanaController : MonoBehaviour
             if (mySR.bounds.Intersects(rightAnswerSR.bounds) && MainController.wheelButton)
             {
                 MainController.rightAnswer = true;
-                Text.tiempoRespuesta = 30;
+                //Text.tiempoRespuesta = 30;
                 Text.points += 3;
         
             }
@@ -42,7 +42,8 @@ public class ventanaController : MonoBehaviour
                 {
                     // destruye la respuesta errada si hacemos click en el wheelButton
                     Destroy(wrongAnswer);
-                    Text.tiempoRespuesta = 30;
+                    MainController.rightAnswer = false;
+                    //Text.tiempoRespuesta = 30;
                     MainController.wheelButton = false;
                     MainController.rightAnswer = false;
                     Text.points -= 2;
