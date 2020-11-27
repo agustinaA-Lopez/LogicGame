@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1350
     height: 680
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -599,7 +599,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 5afbffff
+      m_ExpandedIDs: c6f9ffffdcf9ffff98faffff9cfaffff5afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
