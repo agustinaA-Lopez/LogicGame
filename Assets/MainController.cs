@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    public GameObject inicioObj, level1Obj, playButtonObj, circuloObj, checkObj, level2Obj,level3Obj,level4Obj, mask, fondoObj, MenuButtonObj, Menu, HelpButtonObj;
+    public GameObject inicioObj, level1Obj, playButtonObj, circuloObj, checkObj, level2Obj,level3Obj,level4Obj, mask, fondoObj, MenuButtonObj, Menu, HelpButtonObj, pantallaPrincipalObj, pantallaTiempoObj, pantallaPuntosObj;
     public static bool playbutton, wheelButton, rightAnswer;
     public static int nivel, respuesta;
     public static float tiempo;
     //public static int nivel;
-    private GameObject inicio, playButton, circulo, check, level, ventana, fondo, MenuButton;
+    private GameObject inicio, playButton, circulo, check, level, ventana, fondo, MenuButton, pantallaPrincipal, pantallaTiempo, pantallaPuntos;
 
     public static float tiempoRespuesta = 30;
 
@@ -63,17 +63,25 @@ public class MainController : MonoBehaviour
             Destroy(circulo);
             Destroy(playButton);
             Destroy(check);
+            Destroy(pantallaPrincipal);
+            Destroy(pantallaTiempo);
+            Destroy(pantallaPuntos);
+            Destroy(ventana);
             Destroy(MenuButton);
             nivel ++;
             Level();
 
             Instantiate(HelpButtonObj);
+            pantallaPrincipal = Instantiate(pantallaPrincipalObj);
             fondo = Instantiate(fondoObj);
             ventana = Instantiate(mask);
             circulo = Instantiate(circuloObj);
             check = Instantiate(checkObj); 
             wheelButton= false;
-            rightAnswer = false; 
+            rightAnswer = false;
+           // Instantiate(tiempoObj);
+            pantallaTiempo = Instantiate(pantallaTiempoObj);
+            pantallaPuntos = Instantiate(pantallaPuntosObj);
 
         } 
 

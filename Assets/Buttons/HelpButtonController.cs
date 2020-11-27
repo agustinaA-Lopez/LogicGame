@@ -23,10 +23,10 @@ public class HelpButtonController : MonoBehaviour
     {
 
 
-        if ((int)Tiempo.tiempoRespuesta == 1)
+        if ((int)Text.tiempoRespuesta == 1)
         {
             SpriteRenderer mySR = GetComponent<SpriteRenderer>();
-            Tiempo.points--;
+            Text.points--;
             foreach (GameObject wrongAnswer in GameObject.FindGameObjectsWithTag("wrongAnswer"))
             {
 
@@ -35,7 +35,7 @@ public class HelpButtonController : MonoBehaviour
 
                 Destroy(wrongAnswer);
 
-                Tiempo.tiempoRespuesta = 30;
+                Text.tiempoRespuesta = 30;
                 MainController.wheelButton = false;
                 MainController.rightAnswer = false;
                 break;
@@ -72,10 +72,10 @@ public class HelpButtonController : MonoBehaviour
            
                 Destroy(wrongAnswer);
 
-                Tiempo.tiempoRespuesta = 30;
+                Text.tiempoRespuesta = 30;
                 MainController.wheelButton = false;
                 MainController.rightAnswer = false;
-                Tiempo.points--;
+                Text.points--;
                 break;
 
             
