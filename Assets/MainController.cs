@@ -9,7 +9,7 @@ public class MainController : MonoBehaviour
     public static int nivel, respuesta;
     public static float tiempo;
     //public static int nivel;
-    private GameObject inicio, playButton, circulo, check, level, ventana, fondo, MenuButton, pantallaPrincipal, pantallaTiempo, pantallaPuntos;
+    private GameObject inicio, playButton, circulo, check, level, ventana, fondo, MenuButton, pantallaPrincipal, pantallaTiempo, pantallaPuntos, helpButton;
 
     public static float tiempoRespuesta = 30;
 
@@ -39,7 +39,7 @@ public class MainController : MonoBehaviour
             Destroy(playButton);
             Destroy(check);
             Destroy(MenuButton);
-            Destroy(HelpButtonObj);
+            Destroy(helpButton);
             //Destroy(inicioObj);
             //nivel++;
             // Level();
@@ -71,7 +71,7 @@ public class MainController : MonoBehaviour
             nivel ++;
             Level();
 
-            Instantiate(HelpButtonObj);
+            helpButton = Instantiate(HelpButtonObj);
             pantallaPrincipal = Instantiate(pantallaPrincipalObj);
             fondo = Instantiate(fondoObj);
             ventana = Instantiate(mask);
