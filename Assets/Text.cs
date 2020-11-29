@@ -25,7 +25,7 @@ public class Text : MonoBehaviour
             tiempoRespuesta -= Time.deltaTime;
             
             Tiempo.GetComponent<TMPro.TextMeshProUGUI>().text = ((int)tiempoRespuesta).ToString();
-            if ((int)tiempoRespuesta == 0) tiempoRespuesta = 30;
+            //if ((int)tiempoRespuesta == 0) tiempoRespuesta = 30;
             if (MainController.respuesta != 0) tiempoRespuesta = 29;
         }
 
