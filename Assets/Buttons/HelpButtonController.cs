@@ -24,23 +24,15 @@ public class HelpButtonController : MonoBehaviour
     {
 
 
-        if ((int)Text.tiempoRespuesta <= 1)
+        if ((int)Text.tiempoRespuesta == 0)
         {
-            //SpriteRenderer mySR = GetComponent<SpriteRenderer>();
-            Text.points--;
+
             wrongAnswer = GameObject.FindGameObjectWithTag("wrongAnswer");
-            // {
-
-            //     SpriteRenderer wrongAnswerSR = wrongAnswer.GetComponent<SpriteRenderer>();
-
-
+      
                 Destroy(wrongAnswer);
-
-            //     Text.tiempoRespuesta = 30;
-            //     MainController.wheelButton = false;
-            //     MainController.rightAnswer = false;
-            //     break;
-            // }
+                Text.points--;
+                Text.tiempoRespuesta = 30;
+            
         }
     }
     void OnMouseDown()
@@ -57,23 +49,13 @@ public class HelpButtonController : MonoBehaviour
 
 
         wrongAnswer = GameObject.FindGameObjectWithTag("wrongAnswer");
-        // {
-
-
-        //     SpriteRenderer wrongAnswerSR = wrongAnswer.GetComponent<SpriteRenderer>();
-
-            
-           // Debug.Log("paso por aca");
-
-
-            // if (mySR.bounds.Intersects(wrongAnswerSR.bounds) && MainController.wheelButton)
-            // {
-            //Debug.Log("paso por aca");
+     
             // destruye la respuesta errada si hacemos click en el wheelButton
            
                 Destroy(wrongAnswer);
 
                 Text.tiempoRespuesta = 30;
+                Text.points--;
                 // MainController.wheelButton = false;
                 // MainController.rightAnswer = false;
                 // Text.points--;

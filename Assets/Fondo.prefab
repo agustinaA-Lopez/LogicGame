@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 2856281578269699266}
   - component: {fileID: 1432146500038228070}
   m_Layer: 0
-  m_Name: fondo
+  m_Name: Fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,7 +108,7 @@ Transform:
   m_GameObject: {fileID: 7968519807375526228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4069, y: 0.4121929, z: 1}
+  m_LocalScale: {x: 0.43, y: 0.4121929, z: 1}
   m_Children:
   - {fileID: 2117265360621607330}
   m_Father: {fileID: 0}
