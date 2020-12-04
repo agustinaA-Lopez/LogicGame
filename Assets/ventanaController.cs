@@ -46,7 +46,6 @@ public class ventanaController : MonoBehaviour
 
                     
                 respuestasController.paraDestruir = wrongAnswer;
-                // Destroy(wrongAnswer);
 
                 MainController.rightAnswer = false;
                 Text.tiempoRespuesta = 30;

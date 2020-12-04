@@ -10,7 +10,7 @@ public class HelpButtonController : MonoBehaviour
     private GameObject[] wrongAnswers;
     public static bool use;
 
-    // GameObject pressedButton;
+
     // Start is called before the first frame updatevoid OnMouseDown()
     public Renderer rend;
 
@@ -43,57 +43,33 @@ public class HelpButtonController : MonoBehaviour
         clickSound = Instantiate(clickOnSound);
         clickSound.GetComponent<AudioSource>().Play();
 
-        //click = true;
-
-        SpriteRenderer mySR = GetComponent<SpriteRenderer>();
 
 
         wrongAnswers = GameObject.FindGameObjectsWithTag("wrongAnswer");
      
-            // destruye la respuesta errada si hacemos click en el wheelButton
+            // destruye random respuesta errada si hacemos click en el helpbutton
                 int i = Random.Range(0,(wrongAnswers.Length));
                 respuestasController.paraDestruir = wrongAnswers[i];
 
                 Text.tiempoRespuesta = 30;
                 Text.points--;
-                // MainController.wheelButton = false;
-                // MainController.rightAnswer = false;
-                // Text.points--;
-                // break;
-
-            
-            //}
-        // }
-
-
 
     }
     //esta funcion chequea cuando entramos al area del boton
     void OnMouseEnter()
     {
-        //cuando estamos sobre el boton avisamos que esta siendo usado
-        //use = true;
+        
         //ya explicamos rend para el fadeOff
         rend.material.color = Color.white;
     }
 
 
 
-
+    // avisa cuando estamos sobre el collider(boton)
     void OnMouseOver()
     {
 
         if (rend.material.color.r > .2) rend.material.color -= new Color(.01f, 0, 0) * Time.deltaTime * 120;
-
-        // si ya hicimos click y se completo el proceso de fadeOff damos aviso a wheelButton que el boton fue presionado
-       // if (rend.material.color.r <= .5F && click)
-        //{
-
-           // MainController.wheelButton = true;
-            //click = false;
-
-        //}
-
 
     }
 
@@ -101,7 +77,7 @@ public class HelpButtonController : MonoBehaviour
     void OnMouseExit()
     {
         rend.material.color = Color.white;
-        //use = false;
+
 
     }
 

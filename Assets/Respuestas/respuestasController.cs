@@ -24,18 +24,6 @@ bool click;
 
     void Start()
     {
-        // r1a = new GameObject[2];
-        // r1b  = new GameObject[2];
-        // r1c = new GameObject[2];
-        // r1d = new GameObject[2];
-        // r2a = new GameObject[2];
-        // r2b = new GameObject[2];
-        // r2c = new GameObject[2];
-        // r2d = new GameObject[2];
-
-
-
-
 
         rend = GetComponent<Renderer>();
         Respuesta();
@@ -55,19 +43,14 @@ Vector3 control;
 
     void Update ()
     {
-        if (firstDestroyed) 
-        {
 
-            Destroy(GameObject.Find(secondObj));
-            firstDestroyed = false;
-        }
-        
+        Destroy(GameObject.Find(secondObj));
+     
         if (paraDestruir != null)
         {
 
             Destroy(paraDestruir); 
-            secondObj = paraDestruir.name;
-            firstDestroyed = true;   
+            secondObj = paraDestruir.name;  
 
         }
     }
