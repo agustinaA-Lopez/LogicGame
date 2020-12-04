@@ -5,7 +5,7 @@ using UnityEngine;
 public class ventanaController : MonoBehaviour
 {
 
-  
+    GameObject objClone, wrongAnswer;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,7 @@ public class ventanaController : MonoBehaviour
         SpriteRenderer mySR = GetComponent<SpriteRenderer>();
 
         foreach (GameObject rigthAnswer in GameObject.FindGameObjectsWithTag("rightAnswer"))
-            {
+        {
             SpriteRenderer rightAnswerSR = rigthAnswer.GetComponent<SpriteRenderer>();
             
             if (mySR.bounds.Intersects(rightAnswerSR.bounds) && MainController.wheelButton)
@@ -32,57 +32,32 @@ public class ventanaController : MonoBehaviour
         
             }
         } 
+         
 
-            foreach (GameObject wrongAnswer in GameObject.FindGameObjectsWithTag("wrongAnswer"))
-            {
-                //Debug.Log(wrongAnswer.name);
+        foreach (GameObject wrongAnswer in GameObject.FindGameObjectsWithTag("wrongAnswer"))
+        {
+              
                 
-                SpriteRenderer wrongAnswerSR = wrongAnswer.GetComponent<SpriteRenderer>();
-                
+            SpriteRenderer wrongAnswerSR = wrongAnswer.GetComponent<SpriteRenderer>();
+                // if (objClone != null) Debug.Log("about to Destroy");
                 //GameObject objClone = GameObject.Find(wrongAnswer.name);
-                if (mySR.bounds.Intersects(wrongAnswerSR.bounds) && MainController.wheelButton) 
-                {
-                    for (int i = 0; i < 3; i++)
-                    {
-                       
-                    //     GameObject destroy = GameObject.Find(wrongAnswer.name);
-                    //     Debug.Log(destroy.transform);
-                    //     Destroy(destroy);
-                    
-                        GameObject objClone = GameObject.Find(wrongAnswer.name);
-                        if (objClone != null){
-                        
-                        Destroy(objClone);
-                        Debug.Log(objClone);
-                        }
-                    }
-                    
-                    // destruye la respuesta errada si hacemos click en el wheelButton
-                    
-                    //Debug.Log(wrongAnswer.name); 
-                    Destroy(wrongAnswer);
-                    
-
-                     
-                    
-                    
-                    
+            if (mySR.bounds.Intersects(wrongAnswerSR.bounds) && MainController.wheelButton) 
+            {
 
                     
-                    
-                    //Destroy(GameObject.Find(wrongAnswer.name));
-                    //GameObject destroy = GameObject.Find(wrongAnswer.name);
-                    
-                    MainController.rightAnswer = false;
-                    Text.tiempoRespuesta = 30;
-                    MainController.wheelButton = false;
-                    MainController.rightAnswer = false;
-                    Text.points -= 2;
+                respuestasController.paraDestruir = wrongAnswer;
+                // Destroy(wrongAnswer);
+
+                MainController.rightAnswer = false;
+                Text.tiempoRespuesta = 30;
+                MainController.wheelButton = false;
+                MainController.rightAnswer = false;
+                Text.points -= 2;
+            }
+            
+            
         } 
-        
-        }
-      
-        
+  
     }
 
 

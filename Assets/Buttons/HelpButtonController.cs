@@ -6,8 +6,8 @@ public class HelpButtonController : MonoBehaviour
 {
 
     bool click, answer;
-    public GameObject clickOnSound;
-    private GameObject wrongAnswer;
+    public GameObject clickOnSound, wrongAnswer;
+    private GameObject[] wrongAnswers;
     public static bool use;
 
     // GameObject pressedButton;
@@ -48,11 +48,11 @@ public class HelpButtonController : MonoBehaviour
         SpriteRenderer mySR = GetComponent<SpriteRenderer>();
 
 
-        wrongAnswer = GameObject.FindGameObjectWithTag("wrongAnswer");
+        wrongAnswers = GameObject.FindGameObjectsWithTag("wrongAnswer");
      
             // destruye la respuesta errada si hacemos click en el wheelButton
-           
-                Destroy(wrongAnswer);
+                int i = Random.Range(0,(wrongAnswers.Length));
+                respuestasController.paraDestruir = wrongAnswers[i];
 
                 Text.tiempoRespuesta = 30;
                 Text.points--;
