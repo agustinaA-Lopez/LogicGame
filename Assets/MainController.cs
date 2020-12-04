@@ -85,7 +85,6 @@ public class MainController : MonoBehaviour
 
         } 
 
-    
 
         // Timer (en proceso ...)
 

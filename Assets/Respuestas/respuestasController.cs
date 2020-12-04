@@ -13,13 +13,27 @@ public GameObject  r1aObj, r1bObj, r1cObj, r1dObj;
 public GameObject r2aObj, r2bObj, r2cObj, r2dObj; 
 
 
-GameObject r1a, r1b, r1c, r1d;
-GameObject r2a, r2b, r2c, r2d;
+GameObject r1a;
+GameObject r1b, r1c, r1d;
+GameObject[] r2a, r2b, r2c, r2d;
 private GameObject respuesta;
 bool click;
 
     void Start()
     {
+        // r1a = new GameObject[2];
+        // r1b  = new GameObject[2];
+        // r1c = new GameObject[2];
+        // r1d = new GameObject[2];
+        r2a = new GameObject[2];
+        r2b = new GameObject[2];
+        r2c = new GameObject[2];
+        r2d = new GameObject[2];
+
+
+
+
+
         rend = GetComponent<Renderer>();
         Respuesta();
         
@@ -90,6 +104,7 @@ void Respuesta()
 {
 switch (MainController.nivel)
     {
+        
         case 0:
             break;
 
@@ -116,18 +131,18 @@ switch (MainController.nivel)
         case 2:
         for (int i = 0; i < 2; i++)
         {
-            r2a = Instantiate(r2aObj);
-            r2a.transform.SetParent(gameObject.transform);
+            r2a[i] = Instantiate(r2aObj);
+            r2a[i].transform.SetParent(gameObject.transform);
             gameObject.transform.Rotate(0,0,45f);
-            r2b = Instantiate(r2bObj);
-            r2b.transform.SetParent(gameObject.transform);
+            r2b[i] = Instantiate(r2bObj);
+            r2b[i].transform.SetParent(gameObject.transform);
             gameObject.transform.Rotate(0,0,45f);
-            r2c = Instantiate(r2cObj);
-            r2c.transform.SetParent(gameObject.transform);
+            r2c[i] = Instantiate(r2cObj);
+            r2c[i].transform.SetParent(gameObject.transform);
             gameObject.transform.Rotate(0,0,45f);
             
-            r2d = Instantiate(r2dObj);
-            r2d.transform.SetParent(gameObject.transform);
+            r2d[i] = Instantiate(r2dObj);
+            r2d[i].transform.SetParent(gameObject.transform);
            gameObject.transform.Rotate(0,0,45f);
             
         }  

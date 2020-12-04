@@ -212,7 +212,7 @@ MonoBehaviour:
   rend: {fileID: 0}
   clickOnSound: {fileID: 2608477694165359542, guid: fa6a109fb4add354b8f04ae36aa79c53, type: 3}
   r1aObj: {fileID: 3485357101218603625, guid: fe24e3e34453f72428894d3386f37caa, type: 3}
-  r1bObj: {fileID: 3814089580634778206, guid: 66602a39404342a47aec3178450694de, type: 3}
+  r1bObj: {fileID: 7739338484675825815, guid: 66602a39404342a47aec3178450694de, type: 3}
   r1cObj: {fileID: 5716616219973915591, guid: f5071b44fece05541b4802f0eb36d161, type: 3}
   r1dObj: {fileID: 4912609835199587475, guid: 14df39ba8fc260043b68b9f4e61e1776, type: 3}
   r2aObj: {fileID: 8518172747390746397, guid: 29d408d87800ecb40a553e5510877054, type: 3}
