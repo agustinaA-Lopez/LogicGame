@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BackButtonController
     - ButtonController
     - DestroyOnSoundEnd
     - HelpButtonController
@@ -63,39 +64,41 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11828}
+      Script: {instanceID: 11838}
     - Class: 114
-      Script: {instanceID: 11846}
+      Script: {instanceID: 11856}
     - Class: 114
-      Script: {instanceID: 12174}
+      Script: {instanceID: 12184}
     - Class: 114
-      Script: {instanceID: 12918}
+      Script: {instanceID: 12928}
     - Class: 114
-      Script: {instanceID: 12976}
+      Script: {instanceID: 12986}
     - Class: 114
-      Script: {instanceID: 13416}
+      Script: {instanceID: 13426}
     - Class: 114
-      Script: {instanceID: 13776}
+      Script: {instanceID: 13812}
     - Class: 114
-      Script: {instanceID: 13802}
+      Script: {instanceID: 14082}
     - Class: 114
-      Script: {instanceID: 14072}
+      Script: {instanceID: 14086}
     - Class: 114
-      Script: {instanceID: 14076}
+      Script: {instanceID: 14106}
     - Class: 114
-      Script: {instanceID: 14096}
+      Script: {instanceID: 14426}
     - Class: 114
-      Script: {instanceID: 14416}
+      Script: {instanceID: 14530}
     - Class: 114
-      Script: {instanceID: 14520}
+      Script: {instanceID: 14824}
     - Class: 114
-      Script: {instanceID: 14814}
+      Script: {instanceID: 15040}
     - Class: 114
-      Script: {instanceID: 15030}
+      Script: {instanceID: 15090}
     - Class: 114
-      Script: {instanceID: 15080}
+      Script: {instanceID: 15170}
     - Class: 114
-      Script: {instanceID: 15160}
+      Script: {instanceID: 19332}
+    - Class: 114
+      Script: {instanceID: 19356}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 123
@@ -423,12 +426,6 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 901710cd3f39be9202503aaed58c42eb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Text
-  - hash:
-      serializedVersion: 2
       Hash: b94476007576334e9cf43cb39fbd61d5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -465,7 +462,7 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 9f33c562502ace7af1ae8821701adfbb
+      Hash: 0a6c5e88c83dfe8c04ad812a2169ae68
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainController
@@ -649,6 +646,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 901710cd3f39be9202503aaed58c42eb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: b94476007576334e9cf43cb39fbd61d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackButtonController
   platform: 13
   scenePathNames:
   - Assets/new project.unity

@@ -4,35 +4,49 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    public GameObject inicioObj, level1Obj, playButtonObj, circuloObj, checkObj, level2Obj,level3Obj,level4Obj, mask, fondoObj, MenuButtonObj, Menu, HelpButtonObj, pantallaPrincipalObj, pantallaTiempoObj, pantallaPuntosObj;
+    public GameObject inicioObj, level1Obj, playButtonObj, circuloObj, checkObj, level2Obj, level3Obj, level4Obj, mask, fondoObj, MenuButtonObj, Menu, HelpButtonObj, BackButton, pantallaPrincipalObj, pantallaTiempoObj, pantallaPuntosObj;
     public static bool playbutton, wheelButton, rightAnswer;
     public static int nivel, respuesta;
     public static float tiempo;
     //public static int nivel;
-    private GameObject inicio, playButton, circulo, check, level, ventana, fondo, MenuButton, pantallaPrincipal, pantallaTiempo, pantallaPuntos, helpButton;
+    private GameObject inicio, playButton, backButton, circulo, check, level, ventana, fondo, MenuButton, pantallaPrincipal, pantallaTiempo, pantallaPuntos, helpButton, menu;
 
     public static float tiempoRespuesta = 30;
+    public static bool instanciar = true;
+    public static bool instanciadorNivel;
 
     //public GameObject timeObj;
-    public static int vidas=10;
-    
+    //public static int vidas=10;
+
     // Start is called before the first frame update
     void Start()
     {
         rightAnswer = true;
         nivel = 0;
-        level = Instantiate(inicioObj);
+        //level = Instantiate(inicioObj);
         //circulo = Instantiate(circuloObj);
-        playButton = Instantiate(playButtonObj);
-        MenuButton = Instantiate(MenuButtonObj);
+        // playButton = Instantiate(playButtonObj);
+        //MenuButton = Instantiate(MenuButtonObj);
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
+        if (nivel == 0 && instanciar)
+        {
+            level = Instantiate(inicioObj);
+            playButton = Instantiate(playButtonObj);
+            MenuButton = Instantiate(MenuButtonObj);
+            instanciar = false;
+            BackButtonController.NivelPrevio = nivel;
+
+        }
+
         if (wheelButton && nivel == -1)
         {
+            //destruccion cosas de inicio
 
             Destroy(level);
             Destroy(circulo);
@@ -40,25 +54,42 @@ public class MainController : MonoBehaviour
             Destroy(check);
             Destroy(MenuButton);
             Destroy(helpButton);
-            //Destroy(inicioObj);
-            //nivel++;
-            // Level();
 
-            //fondo = Instantiate(fondoObj);
-            //ventana = Instantiate(mask);
-            //circulo = Instantiate(circuloObj);
-            //check = Instantiate(checkObj);
 
-            Instantiate(Menu);
+            //destruccion cosas de nivel mayor a 0
+
+            Destroy(helpButton);
+            Destroy(pantallaPrincipal);
+            Destroy(fondo);
+            Destroy(ventana);
+            Destroy(check);
+            Destroy(pantallaTiempo);
+            Destroy(pantallaPuntos);
+
+
+
+            //instancia cosas del nivel -1
+            menu = Instantiate(Menu);
+            backButton = Instantiate(BackButton);
             wheelButton = false;
-            rightAnswer = false;
+
+        }
+        if (BackButtonController.PushButton)
+        {
+            Destroy(backButton);
+            Destroy(menu);
+            //Destroy(MenuButton);
+            BackButtonController.PushButton = false;
 
         }
 
 
+
         // Controla los niveles. Destruye e instancia en funcion del nivel
-        if ( wheelButton && rightAnswer) {
-           
+        // if ( wheelButton && rightAnswer) {
+        if (instanciadorNivel && rightAnswer)
+        {
+
             Destroy(level);
             Destroy(circulo);
             Destroy(playButton);
@@ -68,73 +99,64 @@ public class MainController : MonoBehaviour
             Destroy(pantallaPuntos);
             Destroy(ventana);
             Destroy(MenuButton);
-            nivel ++;
+
+            MenuButton = Instantiate(MenuButtonObj);
+
+            nivel++;
             Level();
+
+
+            BackButtonController.NivelPrevio = nivel;
+            MenuButton.transform.position = new Vector3(1.8f, -4.3f, 0);
+
+
 
             helpButton = Instantiate(HelpButtonObj);
             pantallaPrincipal = Instantiate(pantallaPrincipalObj);
             fondo = Instantiate(fondoObj);
             ventana = Instantiate(mask);
             circulo = Instantiate(circuloObj);
-            check = Instantiate(checkObj); 
-            wheelButton= false;
+            check = Instantiate(checkObj);
+            wheelButton = false;
             rightAnswer = false;
-           // Instantiate(tiempoObj);
             pantallaTiempo = Instantiate(pantallaTiempoObj);
             pantallaPuntos = Instantiate(pantallaPuntosObj);
 
-        } 
+            instanciadorNivel = false;
 
+        }
 
-        // Timer (en proceso ...)
-
-    /*    tiempoRespuesta -= Time.deltaTime;
-       // scoreObj.GetComponent<TMPro.TextMeshProUGUI>().text = score.ToString(); 
-        timeObj.GetComponent<TMPro.TextMeshProUGUI>().text = "Tiempo: " + ((int)tiempoRespuesta).ToString();
-        if ((int)tiempoRespuesta == 0) tiempoRespuesta = 30;
-        //if (Juego.respuesta != 0) tiempoRespuesta = 29;
-
-        //hace que no empiece el tiempo hasta que salga del inicio
-        //if (nivel < 1||Preg.tiempo<5)
-        // {
-        //     GetComponent<TextMesh>().text = "";
-        //     tiempoRespuesta = 29;
-        // }
-        // if (nivel > 0)
-        // {
-        //     Credito.GetComponent<TextMesh>().text = "Credits: " + vidas;
-
-        // }*/
 
 
     }
 
     //Controla los niveles
- void Level(){
- switch (nivel)
+    void Level()
     {
-        case 0:
-            level = Instantiate(inicioObj);
-            
-            break;
+        switch (nivel)
+        {
+            case 0:
+                level = Instantiate(inicioObj);
 
-        case 1: 
-            level = Instantiate(level1Obj);
-            break;
+                break;
 
-        case 2:
-            level = Instantiate(level2Obj);
-            break;
+            case 1:
+                level = Instantiate(level1Obj);
+                break;
 
-        case 3:
-            level = Instantiate(level3Obj);
-            break;
+            case 2:
+                level = Instantiate(level2Obj);
+                break;
 
-        case 4:
-            level = Instantiate(level4Obj);
-            break;   
+            case 3:
+                level = Instantiate(level3Obj);
+                break;
+
+            case 4:
+                level = Instantiate(level4Obj);
+                break;
+        }
     }
- }
 
 }
 

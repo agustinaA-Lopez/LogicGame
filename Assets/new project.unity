@@ -286,7 +286,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 301353517}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d4799e8aba0de64594267288e88e64f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d1df05910789f44e8f3cfa6a2441bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Puntos: {fileID: 1314886979}
@@ -795,6 +795,7 @@ MonoBehaviour:
   MenuButtonObj: {fileID: 662639380218731518, guid: 1719713f517a54a49a3cbed0b1b54b60, type: 3}
   Menu: {fileID: 7491219228876962878, guid: 9b2a67138d044e14197e29db17a2c7e7, type: 3}
   HelpButtonObj: {fileID: 662639380218731518, guid: d061953129a08794abaec3c1c80f449f, type: 3}
+  BackButton: {fileID: 662639380218731518, guid: 0e11559dd054ad04994f0c6a4500bbe0, type: 3}
   pantallaPrincipalObj: {fileID: 152433306889818236, guid: 9a241bd82c3269c41a809a2044410876, type: 3}
   pantallaTiempoObj: {fileID: 3256612909937465492, guid: 995c06b44ec784d4c9a9cdcac9984cfe, type: 3}
   pantallaPuntosObj: {fileID: 8426162111975025712, guid: 3bbd922c79ad6d54e8bf03110c752e41, type: 3}

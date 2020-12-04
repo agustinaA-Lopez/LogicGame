@@ -8,7 +8,7 @@ public class ButtonController : MonoBehaviour
     public GameObject clickOnSound;
     public static bool use;
 
-   // GameObject pressedButton;
+    // GameObject pressedButton;
     // Start is called before the first frame updatevoid OnMouseDown()
     public Renderer rend;
 
@@ -16,20 +16,22 @@ public class ButtonController : MonoBehaviour
     {
         rend = GetComponent<Renderer>(); // rend se usa para el fadeOff del boton al presionar
         use = false;
-        
+
     }
 
 
-    void OnMouseDown(){
+    void OnMouseDown()
+    {
 
         //sound on click
         GameObject clickSound;
         clickSound = Instantiate(clickOnSound);
         clickSound.GetComponent<AudioSource>().Play();
-        
+
         click = true;
-        
-        
+        MainController.instanciadorNivel = true;
+
+
     }
     //esta funcion chequea cuando entramos al area del boton
     void OnMouseEnter()
@@ -42,21 +44,22 @@ public class ButtonController : MonoBehaviour
 
 
 
-    
+
     void OnMouseOver()
     {
-        
-        if (rend.material.color.r >.2) rend.material.color -= new Color(.01f, 0, 0) * Time.deltaTime*120;
-       
-        // si ya hicimos click y se completo el proceso de fadeOff damos aviso a wheelButton que el boton fue presionado
-        if (rend.material.color.r <=.5F && click){
-      
-        MainController.wheelButton = true;
-        click = false;
-        
-        } 
 
-         
+        if (rend.material.color.r > .2) rend.material.color -= new Color(.01f, 0, 0) * Time.deltaTime * 120;
+
+        // si ya hicimos click y se completo el proceso de fadeOff damos aviso a wheelButton que el boton fue presionado
+        if (rend.material.color.r <= .5F && click)
+        {
+
+            MainController.wheelButton = true;
+            click = false;
+
+        }
+
+
     }
 
     // esta funcion nos avisa cuando salimos del boton

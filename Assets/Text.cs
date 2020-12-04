@@ -7,7 +7,7 @@ public class Text : MonoBehaviour
     public static float tiempoRespuesta = 30;
 
     public GameObject Puntos, Tiempo;
-    public static int points=0;
+    public static int points = 0;
 
 
     // Update is called once per frame
@@ -15,18 +15,25 @@ public class Text : MonoBehaviour
     {
 
 
-        
+
 
         //hace que no empiece el tiempo hasta que salga del inicio
-       
+
         if (MainController.nivel > 0)
         {
-            Puntos.GetComponent<TMPro.TextMeshProUGUI>().text = ((int)points). ToString();
+            Puntos.GetComponent<TMPro.TextMeshProUGUI>().text = ((int)points).ToString();
             tiempoRespuesta -= Time.deltaTime;
-            
+
             Tiempo.GetComponent<TMPro.TextMeshProUGUI>().text = ((int)tiempoRespuesta).ToString();
             //if ((int)tiempoRespuesta == 0) tiempoRespuesta = 30;
             if (MainController.respuesta != 0) tiempoRespuesta = 29;
+
+        }
+        if (MainController.nivel == -1)
+        {
+            Puntos.GetComponent<TMPro.TextMeshProUGUI>().text = "";
+            Tiempo.GetComponent<TMPro.TextMeshProUGUI>().text = "";
+
         }
 
 
