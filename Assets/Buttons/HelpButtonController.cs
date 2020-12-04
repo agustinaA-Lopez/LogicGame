@@ -6,9 +6,9 @@ public class HelpButtonController : MonoBehaviour
 {
 
     bool click, answer;
-    public GameObject clickOnSound, wrongAnswer;
+    public GameObject clickOnSound;
     private GameObject[] wrongAnswers;
-    public static bool use;
+    private GameObject clickSound;
 
 
     // Start is called before the first frame updatevoid OnMouseDown()
@@ -17,44 +17,41 @@ public class HelpButtonController : MonoBehaviour
     void Start()
     {
         rend = GetComponent<Renderer>(); // rend se usa para el fadeOff del boton al presionar
-        use = false;
 
     }
      void Update()
     {
 
 
-        if ((int)Text.tiempoRespuesta == 0)
+        if ((int)Text.tiempoRespuesta == 0 || click)
         {
+            // sonido click para saber que se elimino respuesta
+            clickSound = Instantiate(clickOnSound);
+            clickSound.GetComponent<AudioSource>().Play();
 
-            wrongAnswer = GameObject.FindGameObjectWithTag("wrongAnswer");
+
+            //todas las "wrongAnswer"
+            wrongAnswers = GameObject.FindGameObjectsWithTag("wrongAnswer");
+     
+            // destruye random respuesta errada si hacemos click en el helpbutton
+                int i = Random.Range(0,(wrongAnswers.Length));
+                respuestasController.paraDestruir = wrongAnswers[i];
       
-                Destroy(wrongAnswer);
                 Text.points--;
                 Text.tiempoRespuesta = 30;
+
+                click = false;
             
         }
     }
     void OnMouseDown()
     {
 
-        //sound on click
-        GameObject clickSound;
-        clickSound = Instantiate(clickOnSound);
-        clickSound.GetComponent<AudioSource>().Play();
-
-
-
-        wrongAnswers = GameObject.FindGameObjectsWithTag("wrongAnswer");
-     
-            // destruye random respuesta errada si hacemos click en el helpbutton
-                int i = Random.Range(0,(wrongAnswers.Length));
-                respuestasController.paraDestruir = wrongAnswers[i];
-
-                Text.tiempoRespuesta = 30;
-                Text.points--;
+        click = true;
 
     }
+
+
     //esta funcion chequea cuando entramos al area del boton
     void OnMouseEnter()
     {
@@ -78,10 +75,8 @@ public class HelpButtonController : MonoBehaviour
     {
         rend.material.color = Color.white;
 
-
     }
 
-
-        }
+}
 
 
