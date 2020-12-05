@@ -79,7 +79,6 @@ Vector3 control;
         
         control  = Input.mousePosition;
 
-        //Debug.Log(gameObject.transform.rotation.z);
         }
     }
 
@@ -154,28 +153,7 @@ switch (MainController.nivel)
      
 
         break; 
-
-        // case 3:
-        //  r1a = Instantiate(r1aObj); r1a1 = Instantiate(r1a1Obj); r1a2 = Instantiate(r1a2Obj);
-        //     r1b = Instantiate(r1bObj); r1b1 = Instantiate(r1b1Obj); r1b2 = Instantiate(r1b2Obj);
-        //     r1c = Instantiate(r1cObj); r1c1 = Instantiate(r1c1Obj); r1c2 = Instantiate(r1c2Obj); 
-        //     r1d = Instantiate(r1dObj); r1d1 = Instantiate(r1d1Obj); r1d2 = Instantiate(r1d2Obj);
-        //     r1a.transform.SetParent(gameObject.transform); r1a1.transform.SetParent(gameObject.transform); r1a2.transform.SetParent(gameObject.transform); 
-        //     r1b.transform.SetParent(gameObject.transform); r1b1.transform.SetParent(gameObject.transform); r1b2.transform.SetParent(gameObject.transform); 
-        //     r1c.transform.SetParent(gameObject.transform); r1c1.transform.SetParent(gameObject.transform); r1c2.transform.SetParent(gameObject.transform); 
-        //     r1d.transform.SetParent(gameObject.transform); r1d1.transform.SetParent(gameObject.transform); r1d2.transform.SetParent(gameObject.transform); 
-        //     break;
-
-        // case 4:
-        //     r1a = Instantiate(r1aObj); r1a1 = Instantiate(r1a1Obj); r1a2 = Instantiate(r1a2Obj);
-        //     r1b = Instantiate(r1bObj); r1b1 = Instantiate(r1b1Obj); r1b2 = Instantiate(r1b2Obj);
-        //     r1c = Instantiate(r1cObj); r1c1 = Instantiate(r1c1Obj); r1c2 = Instantiate(r1c2Obj); 
-        //     r1d = Instantiate(r1dObj); r1d1 = Instantiate(r1d1Obj); r1d2 = Instantiate(r1d2Obj);
-        //     r1a.transform.SetParent(gameObject.transform); r1a1.transform.SetParent(gameObject.transform); r1a2.transform.SetParent(gameObject.transform); 
-        //     r1b.transform.SetParent(gameObject.transform); r1b1.transform.SetParent(gameObject.transform); r1b2.transform.SetParent(gameObject.transform); 
-        //     r1c.transform.SetParent(gameObject.transform); r1c1.transform.SetParent(gameObject.transform); r1c2.transform.SetParent(gameObject.transform); 
-        //     r1d.transform.SetParent(gameObject.transform); r1d1.transform.SetParent(gameObject.transform); r1d2.transform.SetParent(gameObject.transform); 
-        //     break;   
+  
     }
  }
 
