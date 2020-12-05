@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1157
     height: 616
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 122
+  controlID: 83
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 28
+  controlID: 93
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 29
+  controlID: 58
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -329,8 +329,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 13}
-    m_SelectedIDs: 8a3e0000
-    m_LastClickedID: 16010
+    m_SelectedIDs: 8e3e0000
+    m_LastClickedID: 16014
     m_ExpandedIDs: 00000000823e0000843e0000863e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -483,7 +483,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 3afbffff
+      m_ExpandedIDs: 5afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -689,23 +689,23 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 0
+      y: 21
       width: 611
-      height: 274
-    m_Scale: {x: 0.12685186, y: 0.12685186}
-    m_Translation: {x: 305.5, y: 137}
+      height: 253
+    m_Scale: {x: 0.11712964, y: 0.11712963}
+    m_Translation: {x: 305.5, y: 126.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -2408.321
+      x: -2608.2212
       y: -1080
-      width: 4816.642
+      width: 5216.4424
       height: 2160
     m_MinimalGUI: 1
-  m_defaultScale: 0.12685186
+  m_defaultScale: 0.11712963
   m_LastWindowPixelSize: {x: 611, y: 274}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
