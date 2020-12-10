@@ -14,8 +14,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -64,41 +62,41 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11838}
+      Script: {instanceID: 11828}
     - Class: 114
-      Script: {instanceID: 11856}
+      Script: {instanceID: 11846}
     - Class: 114
-      Script: {instanceID: 12184}
+      Script: {instanceID: 12174}
     - Class: 114
-      Script: {instanceID: 12928}
+      Script: {instanceID: 12918}
     - Class: 114
-      Script: {instanceID: 12986}
+      Script: {instanceID: 12952}
     - Class: 114
-      Script: {instanceID: 13426}
+      Script: {instanceID: 12978}
     - Class: 114
-      Script: {instanceID: 13812}
+      Script: {instanceID: 13418}
     - Class: 114
-      Script: {instanceID: 14082}
+      Script: {instanceID: 13802}
     - Class: 114
-      Script: {instanceID: 14086}
+      Script: {instanceID: 13852}
     - Class: 114
-      Script: {instanceID: 14106}
+      Script: {instanceID: 14074}
     - Class: 114
-      Script: {instanceID: 14426}
+      Script: {instanceID: 14078}
     - Class: 114
-      Script: {instanceID: 14530}
+      Script: {instanceID: 14098}
     - Class: 114
-      Script: {instanceID: 14824}
+      Script: {instanceID: 14418}
     - Class: 114
-      Script: {instanceID: 15040}
+      Script: {instanceID: 14522}
     - Class: 114
-      Script: {instanceID: 15090}
+      Script: {instanceID: 14816}
     - Class: 114
-      Script: {instanceID: 15170}
+      Script: {instanceID: 15032}
     - Class: 114
-      Script: {instanceID: 19332}
+      Script: {instanceID: 15082}
     - Class: 114
-      Script: {instanceID: 19356}
+      Script: {instanceID: 15162}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 123
@@ -354,6 +352,12 @@ ScriptsOnlyBuild:
     className: SpriteShape
   - hash:
       serializedVersion: 2
+      Hash: b94476007576334e9cf43cb39fbd61d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackButtonController
+  - hash:
+      serializedVersion: 2
       Hash: 5cc439bf63c0539d39588e69465ac2ab
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -430,6 +434,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonController
+  - hash:
+      serializedVersion: 2
+      Hash: 901710cd3f39be9202503aaed58c42eb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Text
   - hash:
       serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
@@ -646,18 +656,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 901710cd3f39be9202503aaed58c42eb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Text
-  - hash:
-      serializedVersion: 2
-      Hash: b94476007576334e9cf43cb39fbd61d5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BackButtonController
   platform: 13
   scenePathNames:
   - Assets/new project.unity
