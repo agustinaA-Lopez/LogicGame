@@ -54,7 +54,7 @@ public class MenuButtonController : MonoBehaviour
 
             MainController.wheelButton = true;
             MainController.nivel = -1;
-        click = false;
+            click = false;
         
         } 
 

@@ -29,7 +29,6 @@ public class ButtonController : MonoBehaviour
         clickSound.GetComponent<AudioSource>().Play();
 
         click = true;
-        MainController.instanciadorNivel = true;
 
 
     }
@@ -56,6 +55,8 @@ public class ButtonController : MonoBehaviour
 
             MainController.wheelButton = true;
             click = false;
+            MainController.instanciadorNivel = true;
+
 
         }
 

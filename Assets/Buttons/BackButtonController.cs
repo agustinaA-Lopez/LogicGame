@@ -34,22 +34,10 @@ public class BackButtonController : MonoBehaviour
         clickSound = Instantiate(clickOnSound);
         clickSound.GetComponent<AudioSource>().Play();
 
-        //te devuelve al nivel donde estabas apretando Back
-        MainController.nivel = NivelPrevio;
-        MainController.instanciar = true;
-        PushButton = true;
 
-        if (NivelPrevio > 0)
-        {
-            MainController.instanciadorNivel = true;
-            MainController.nivel--;
-            MainController.rightAnswer = true;
-        }
+        click = true;
 
-
-        //click = true;
-
-        SpriteRenderer mySR = GetComponent<SpriteRenderer>();
+        //SpriteRenderer mySR = GetComponent<SpriteRenderer>();
 
 
     }
@@ -57,7 +45,7 @@ public class BackButtonController : MonoBehaviour
     void OnMouseEnter()
     {
         //cuando estamos sobre el boton avisamos que esta siendo usado
-
+        use = true;
         //ya explicamos rend para el fadeOff
         rend.material.color = Color.white;
     }
@@ -70,6 +58,22 @@ public class BackButtonController : MonoBehaviour
 
         if (rend.material.color.r > .2) rend.material.color -= new Color(.01f, 0, 0) * Time.deltaTime * 120;
 
+        if (rend.material.color.r <= .5F && click)
+        {
+
+            //te devuelve al nivel donde estabas apretando Back
+            MainController.nivel = NivelPrevio;
+            MainController.instanciar = true;
+            PushButton = true;
+
+            if (NivelPrevio > 0)
+            {
+                MainController.instanciadorNivel = true;
+                MainController.nivel--;
+                MainController.rightAnswer = true;
+            }
+            click = false;
+        }
 
     }
 
@@ -77,6 +81,8 @@ public class BackButtonController : MonoBehaviour
     void OnMouseExit()
     {
         rend.material.color = Color.white;
+        use = false;
+
 
     }
 
