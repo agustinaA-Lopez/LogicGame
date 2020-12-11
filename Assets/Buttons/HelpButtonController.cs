@@ -5,10 +5,12 @@ using UnityEngine;
 public class HelpButtonController : MonoBehaviour
 {
 
-    bool click, answer;
-    public GameObject clickOnSound;
+    bool answer;
+    public static bool click;
+
     private GameObject[] wrongAnswers;
-    private GameObject clickSound;
+
+    public GameObject ClickOnSoundObj;
 
 
     // Start is called before the first frame updatevoid OnMouseDown()
@@ -23,24 +25,12 @@ public class HelpButtonController : MonoBehaviour
     {
 
 
-        if ((int)Text.tiempoRespuesta == 0 || click)
+        if (click)
         {
-            // sonido click para saber que se elimino respuesta
-            clickSound = Instantiate(clickOnSound);
-            clickSound.GetComponent<AudioSource>().Play();
 
 
-            //todas las "wrongAnswer"
-            wrongAnswers = GameObject.FindGameObjectsWithTag("wrongAnswer");
-     
-            // destruye random respuesta errada si hacemos click en el helpbutton
-                int i = Random.Range(0,(wrongAnswers.Length));
-                respuestasController.paraDestruir = wrongAnswers[i];
-      
-                Text.points--;
-                Text.tiempoRespuesta = 30;
 
-                click = false;
+
             
         }
     }
@@ -48,6 +38,9 @@ public class HelpButtonController : MonoBehaviour
     {
 
         click = true;
+        // sonido click para saber que se elimino respuesta
+        GameObject clickOnSound = Instantiate(ClickOnSoundObj);
+        clickOnSound.GetComponent<AudioSource>().Play();
 
     }
 
@@ -67,6 +60,23 @@ public class HelpButtonController : MonoBehaviour
     {
 
         if (rend.material.color.r > .2) rend.material.color -= new Color(.01f, 0, 0) * Time.deltaTime * 120;
+
+                    //todas las "wrongAnswer"
+            wrongAnswers = GameObject.FindGameObjectsWithTag("wrongAnswer");
+     
+     if ((rend.material.color.r <= .5F && click) || Text.timeOut)
+
+        {
+            // destruye random respuesta errada si hacemos click en el helpbutton
+                int i = Random.Range(0,(wrongAnswers.Length-1));
+                respuestasController.paraDestruir = wrongAnswers[i];
+      
+                Text.points--;
+                Text.tiempoRespuesta = 30;
+
+                click = false;
+                Text.timeOut = false;
+        }
 
     }
 

@@ -3,7 +3,10 @@ guid: 5d1df05910789f44e8f3cfa6a2441bca
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Puntos: {instanceID: 0}
+  - Tiempo: {instanceID: 0}
+  - dingObj: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

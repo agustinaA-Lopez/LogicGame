@@ -36,7 +36,7 @@ Vector3 control;
          // para no confundir boton con rueda usamos  ButtonControoller.use
          // ubica la posicion del angulo de la rueda
     
-        if (!ButtonController.use) {startAngle = getAngle() - transform.rotation.eulerAngles.z;
+        if (!WheelButtonController.use) {startAngle = getAngle() - transform.rotation.eulerAngles.z;
       
        }
     }
@@ -62,7 +62,7 @@ Vector3 control;
         // mueve la rueda llamando a la funcion getAngle().
         
 
-        if (!ButtonController.use){
+        if (!WheelButtonController.use){
        
         //play sound on turning weel
         if (!GetComponent<AudioSource>().isPlaying && Input.mousePosition!=control) GetComponent<AudioSource>().Play();
@@ -109,8 +109,8 @@ void Respuesta()
 switch (MainController.nivel)
     {
         
-        case 0:
-            break;
+        // case 0:
+        //     break;
 
         case 1: 
         for (int i = 0; i < 2; i++)
