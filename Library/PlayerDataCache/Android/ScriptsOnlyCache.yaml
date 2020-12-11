@@ -7,8 +7,10 @@ ScriptsOnlyBuild:
     - HelpButtonController
     - MainController
     - MenuButtonController
+    - PlayButtonController
     - Text
     - respuestasController
+    - silenceMusicButton
     - ventanaController
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -72,33 +74,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12918}
     - Class: 114
-      Script: {instanceID: 12952}
+      Script: {instanceID: 12920}
     - Class: 114
-      Script: {instanceID: 12978}
+      Script: {instanceID: 12954}
     - Class: 114
-      Script: {instanceID: 13418}
+      Script: {instanceID: 12980}
     - Class: 114
-      Script: {instanceID: 13802}
+      Script: {instanceID: 13420}
     - Class: 114
-      Script: {instanceID: 13852}
+      Script: {instanceID: 13804}
     - Class: 114
-      Script: {instanceID: 14074}
+      Script: {instanceID: 13854}
     - Class: 114
-      Script: {instanceID: 14078}
+      Script: {instanceID: 14076}
     - Class: 114
-      Script: {instanceID: 14098}
+      Script: {instanceID: 14080}
     - Class: 114
-      Script: {instanceID: 14418}
+      Script: {instanceID: 14100}
     - Class: 114
-      Script: {instanceID: 14522}
+      Script: {instanceID: 14420}
     - Class: 114
-      Script: {instanceID: 14816}
+      Script: {instanceID: 14524}
     - Class: 114
-      Script: {instanceID: 15032}
+      Script: {instanceID: 14818}
     - Class: 114
-      Script: {instanceID: 15082}
+      Script: {instanceID: 15034}
     - Class: 114
-      Script: {instanceID: 15162}
+      Script: {instanceID: 15084}
+    - Class: 114
+      Script: {instanceID: 15164}
+    - Class: 114
+      Script: {instanceID: 15188}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 123
@@ -192,7 +198,7 @@ ScriptsOnlyBuild:
     className: Scrollbar
   - hash:
       serializedVersion: 2
-      Hash: b94476007576334e9cf43cb39fbd61d5
+      Hash: dbeb45e461fec207b0efaf835105976a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuButtonController
@@ -336,6 +342,12 @@ ScriptsOnlyBuild:
     className: EventSystem
   - hash:
       serializedVersion: 2
+      Hash: dbeb45e461fec207b0efaf835105976a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayButtonController
+  - hash:
+      serializedVersion: 2
       Hash: b424b4eeb810aecb0ff91c62639241e9
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
@@ -354,7 +366,7 @@ ScriptsOnlyBuild:
     className: SpriteShape
   - hash:
       serializedVersion: 2
-      Hash: b94476007576334e9cf43cb39fbd61d5
+      Hash: dbeb45e461fec207b0efaf835105976a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BackButtonController
@@ -432,13 +444,13 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: b94476007576334e9cf43cb39fbd61d5
+      Hash: dbeb45e461fec207b0efaf835105976a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonController
   - hash:
       serializedVersion: 2
-      Hash: 901710cd3f39be9202503aaed58c42eb
+      Hash: 7dbb8ec8ccc22998def4911ba32a98e0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Text
@@ -474,7 +486,7 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 0a6c5e88c83dfe8c04ad812a2169ae68
+      Hash: 264d1e72054bbf53ed3af6db48fda6e0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainController
@@ -576,7 +588,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: b94476007576334e9cf43cb39fbd61d5
+      Hash: dbeb45e461fec207b0efaf835105976a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HelpButtonController
@@ -636,6 +648,12 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
+      Hash: dbeb45e461fec207b0efaf835105976a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: silenceMusicButton
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -661,4 +679,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/new project.unity
-  playerPath: C:/Users/carra/Desktop/LogicGame.apk
+  playerPath: C:/LogicGame-MainFolder/LogicGame/LogicGame.apk

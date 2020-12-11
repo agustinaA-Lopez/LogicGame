@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,40 +24,30 @@ public class ventanaController : MonoBehaviour
         {
             SpriteRenderer rightAnswerSR = rigthAnswer.GetComponent<SpriteRenderer>();
             
-            if (mySR.bounds.Intersects(rightAnswerSR.bounds) && MainController.wheelButton)
+            if (mySR.bounds.Intersects(rightAnswerSR.bounds) && MainController.instanciadorNivel)
             {
                 MainController.rightAnswer = true;
                 Text.tiempoRespuesta = 30;
                 Text.points += 3;
-        
+                MainController.instanciadorNivel = false;
             }
         } 
          
 
         foreach (GameObject wrongAnswer in GameObject.FindGameObjectsWithTag("wrongAnswer"))
         {
-              
-                
+             
             SpriteRenderer wrongAnswerSR = wrongAnswer.GetComponent<SpriteRenderer>();
-                // if (objClone != null) Debug.Log("about to Destroy");
-                //GameObject objClone = GameObject.Find(wrongAnswer.name);
-            if (mySR.bounds.Intersects(wrongAnswerSR.bounds) && MainController.wheelButton) 
+
+            if (mySR.bounds.Intersects(wrongAnswerSR.bounds) && MainController.instanciadorNivel) 
             {
-
-                    
                 respuestasController.paraDestruir = wrongAnswer;
-
                 MainController.rightAnswer = false;
+                MainController.clickOn = false;
                 Text.tiempoRespuesta = 30;
-                MainController.wheelButton = false;
-                MainController.rightAnswer = false;
                 Text.points -= 2;
+                MainController.instanciadorNivel = false;
             }
-            
-            
-        } 
-  
+        }
     }
-
-
 }

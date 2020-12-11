@@ -6,7 +6,9 @@ public class Text : MonoBehaviour
 {
     public static float tiempoRespuesta = 30;
 
-    public GameObject Puntos, Tiempo;
+    public GameObject Puntos, Tiempo, dingObj;
+    GameObject Ding;
+
     public static int points = 0;
 
 
@@ -25,9 +27,19 @@ public class Text : MonoBehaviour
             tiempoRespuesta -= Time.deltaTime;
 
             Tiempo.GetComponent<TMPro.TextMeshProUGUI>().text = ((int)tiempoRespuesta).ToString();
-            //if ((int)tiempoRespuesta == 0) tiempoRespuesta = 30;
-            if (MainController.respuesta != 0) tiempoRespuesta = 29;
+            if ((int)tiempoRespuesta == 0)
+            {
+                // sonido Ding
+                Ding = Instantiate(dingObj);
+                Ding.GetComponent<AudioSource>().Play();
 
+               
+                tiempoRespuesta = 30;
+
+                // sucede lo mismo que cuando apretamos help
+                HelpButtonController.click = true;
+                
+        }
         }
         if (MainController.nivel == -1)
         {

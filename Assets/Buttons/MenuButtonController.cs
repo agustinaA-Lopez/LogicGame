@@ -1,12 +1,14 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuButtonController : MonoBehaviour
 {
     bool click, answer;
-    public GameObject clickOnSound;
+
     public static bool use;
+
+    public GameObject ClickOnSoundObj;
 
    // GameObject pressedButton;
     // Start is called before the first frame updatevoid OnMouseDown()
@@ -24,9 +26,10 @@ public class MenuButtonController : MonoBehaviour
     void OnMouseDown(){
 
         //sound on click
-        GameObject clickSound;
-        clickSound = Instantiate(clickOnSound);
-        clickSound.GetComponent<AudioSource>().Play();
+        GameObject clickOnSound = Instantiate(ClickOnSoundObj);
+        clickOnSound.GetComponent<AudioSource>().Play();
+
+       
         
         click = true;
         
@@ -52,10 +55,11 @@ public class MenuButtonController : MonoBehaviour
         // si ya hicimos click y se completo el proceso de fadeOff damos aviso a wheelButton que el boton fue presionado
         if (rend.material.color.r <=.5F && click){
 
-            MainController.wheelButton = true;
-            MainController.nivel = -1;
+            BackButtonController.NivelPrevio = MainController.nivel;
+
+            MainController.MenuButton = true;
             click = false;
-        
+
         } 
 
          
@@ -67,6 +71,7 @@ public class MenuButtonController : MonoBehaviour
         rend.material.color = Color.white;
         use = false;
 
+    
     }
 
 
