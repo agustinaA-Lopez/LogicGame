@@ -1582,7 +1582,7 @@ GameObject:
   - component: {fileID: 7351175736640119900}
   - component: {fileID: 5348690698974904571}
   - component: {fileID: 1549395500273711206}
-  - component: {fileID: 8490412182047266560}
+  - component: {fileID: 6107159244320778653}
   m_Layer: 0
   m_Name: circuloBoton
   m_TagString: Untagged
@@ -1668,7 +1668,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.4
   m_Center: {x: -3.2241995e-10, y: 0, z: 0}
---- !u!114 &8490412182047266560
+--- !u!114 &6107159244320778653
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1677,7 +1677,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6865459128405021915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1ecc61902bf94b43bc6001847e77fd7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9895eb9286d1e1344bd0b6cc86cc4db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 0}
