@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    public GameObject inicioObj, level1Obj, circuloObj, level2Obj, level3Obj, level4Obj, fondoObj, MenuObj;
+    public GameObject inicioObj, level1Obj, circuloObj, level2Obj, level3Obj, level4Obj, fondoObj, MenuObj, AdvertenciaObj;
     public static bool clickOn, silenceMusic, rightAnswer, MenuButton, backButton;
     public static int nivel, respuesta;
     public static float tiempo;
     //public static int nivel;
-    private GameObject circulo, fondo, menu, level;
+    private GameObject circulo, fondo, menu, level, advertencia;
 
 
     public static float tiempoRespuesta = 30;
     public static bool instanciar = true;
     public static bool instanciadorNivel;
+    public static bool advertenciaBool = true;
 
     //public GameObject timeObj;
     //public static int vidas=10;
@@ -80,6 +81,7 @@ public class MainController : MonoBehaviour
 
         }
 
+       
 
         if (rightAnswer)
         {
@@ -108,7 +110,18 @@ public class MainController : MonoBehaviour
         if (silenceMusic) GetComponent<AudioSource>().volume = 0; 
         //else GetComponent<AudioSource>().volume = .7f;
         }
+
+        if (advertenciaBool)
+        {
+            advertencia = Instantiate(AdvertenciaObj);
+            advertenciaBool = false;
+
         }
+        if (Text.tiempoRespuesta<28)  Destroy(advertencia); 
+
+        }
+        
+
 
     }
 

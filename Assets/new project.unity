@@ -407,6 +407,7 @@ MonoBehaviour:
   level4Obj: {fileID: 2607589548800234482, guid: e050ee1726df69c44af8b06513245b1f, type: 3}
   fondoObj: {fileID: 8798910687077664765, guid: 36c117f8ca84a0147a852b62c2c5a5dd, type: 3}
   MenuObj: {fileID: 7491219228876962878, guid: 9b2a67138d044e14197e29db17a2c7e7, type: 3}
+  AdvertenciaObj: {fileID: 7491219228876962878, guid: 7f41f0a653a0c3b469a35283d7ce0664, type: 3}
 --- !u!4 &2027199789
 Transform:
   m_ObjectHideFlags: 0

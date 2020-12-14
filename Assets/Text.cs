@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Text : MonoBehaviour
 {
-    public static float tiempoRespuesta = 5;
+    public static float tiempoRespuesta = 30;
 
     public GameObject Puntos, Tiempo, dingObj;
     GameObject Ding;
@@ -29,6 +29,9 @@ public class Text : MonoBehaviour
             tiempoRespuesta -= Time.deltaTime;
 
             Tiempo.GetComponent<TMPro.TextMeshProUGUI>().text = ((int)tiempoRespuesta).ToString();
+
+
+
             if ((int)tiempoRespuesta == 0)
             {
                 // sonido Ding
