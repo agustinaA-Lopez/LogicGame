@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    public GameObject inicioObj, level1Obj, circuloObj, level2Obj, level3Obj, level4Obj, fondoObj, MenuObj;
+    public GameObject inicioObj, level1Obj, circuloObj, level2Obj, level3Obj, level4Obj, fondoObj, MenuObj, AdvertenciaObj;
     public static bool clickOn, silenceMusic, rightAnswer, MenuButton, backButton;
     public static int nivel, respuesta;
     public static float tiempo;
     //public static int nivel;
-    private GameObject circulo, fondo, menu, level;
+    private GameObject circulo, fondo, menu, level, advertencia;
 
 
     public static float tiempoRespuesta = 30;
@@ -96,8 +96,6 @@ public class MainController : MonoBehaviour
         }
 
 
-
-//Sonido de fondo
 //Sonido de fondo
             if (nivel > 0)
         {
@@ -111,8 +109,10 @@ public class MainController : MonoBehaviour
         }
 
     }
+    
+    // advertencia Cartel
+    if (Text.tiempoRespuesta < 28) Destroy(advertencia);
     }
-
     //Controla los niveles
     void Level()
     {
@@ -134,6 +134,7 @@ public class MainController : MonoBehaviour
             fondo = Instantiate(fondoObj);
             //ventana = Instantiate(mask);
             circulo = Instantiate(circuloObj);
+            advertencia = Instantiate(AdvertenciaObj);
 
         }
 

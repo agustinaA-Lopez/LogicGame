@@ -19,7 +19,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - upFront
   - 
   - 
   - 
@@ -44,11 +44,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Upfront
     uniqueID: 3821863743
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: 
     uniqueID: 2681070915
