@@ -64,7 +64,7 @@ public class HelpButtonController : MonoBehaviour
                     //todas las "wrongAnswer"
             wrongAnswers = GameObject.FindGameObjectsWithTag("wrongAnswer");
      
-     if (rend.material.color.r <= .5F && click)
+     if ((rend.material.color.r <= .5F && click) || Text.timeOut)
 
         {
             // destruye random respuesta errada si hacemos click en el helpbutton
@@ -75,6 +75,7 @@ public class HelpButtonController : MonoBehaviour
                 Text.tiempoRespuesta = 30;
 
                 click = false;
+                Text.timeOut = false;
         }
 
     }
