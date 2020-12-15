@@ -2,23 +2,19 @@
 
 public class respuestasController : MonoBehaviour
 {
-    public static float z;
-
-    public static bool move, firstDestroyed;
-
 
 public Renderer rend;
-public GameObject clickOnSound;
-public GameObject  r1aObj, r1bObj, r1cObj, r1dObj;
+public GameObject  a1, b1, c1, d1;
 public GameObject r2aObj, r2bObj, r2cObj, r2dObj; 
 
 
 //GameObject r1a;
-GameObject r1a, r1b, r1c, r1d;
+GameObject r1a, r1b, r1c, r1d, r;
 GameObject r2a, r2b, r2c, r2d;
 private GameObject respuesta;
 public static GameObject paraDestruir;
-string secondObj;
+string secondObj, answer;
+int number, asciiLetter;
 
 bool click;
 
@@ -106,55 +102,24 @@ float getAngle(){
 //Instancia las respuestas segun Maincontroller.nivel
 void Respuesta()
 {
-switch (MainController.nivel)
-    {
-        
-        // case 0:
-        //     break;
+    number = MainController.nivel;
+    asciiLetter = 97;
 
-        case 1: 
-        for (int i = 0; i < 2; i++)
+
+        for (int i = 0; i < 8; i++)
         {
-            r1a = Instantiate(r1aObj);
-            r1a.transform.SetParent(gameObject.transform);
+
+            answer = char.ConvertFromUtf32(asciiLetter);
+            answer += number.ToString();
+
+            r = Instantiate(Resources.Load(answer, typeof(GameObject))) as GameObject;
+            r.transform.SetParent(gameObject.transform);
             gameObject.transform.Rotate(0,0,45);
-            r1b = Instantiate(r1bObj);
-            r1b.transform.SetParent(gameObject.transform);
-            gameObject.transform.Rotate(0,0,45);
-            r1c = Instantiate(r1cObj);
-            r1c.transform.SetParent(gameObject.transform);
-            
-            gameObject.transform.Rotate(0,0,45);
-            r1d = Instantiate(r1dObj);
-            r1d.transform.SetParent(gameObject.transform);
-            gameObject.transform.Rotate(0,0,45);
+
+            if (asciiLetter < 100) asciiLetter++; else asciiLetter = 97;
+
         }
-                        break;
 
-
-        case 2:
-        for (int i = 0; i < 2; i++)
-        {
-            r2a = Instantiate(r2aObj);
-            r2a.transform.SetParent(gameObject.transform);
-            gameObject.transform.Rotate(0,0,45f);
-            r2b = Instantiate(r2bObj);
-            r2b.transform.SetParent(gameObject.transform);
-            gameObject.transform.Rotate(0,0,45f);
-            r2c = Instantiate(r2cObj);
-            r2c.transform.SetParent(gameObject.transform);
-            gameObject.transform.Rotate(0,0,45f);
-            
-            r2d = Instantiate(r2dObj);
-            r2d.transform.SetParent(gameObject.transform);
-           gameObject.transform.Rotate(0,0,45f);
-            
-        }  
-     
-
-        break; 
-  
-    }
  }
 
 }
