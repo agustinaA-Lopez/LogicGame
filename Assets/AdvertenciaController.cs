@@ -23,6 +23,9 @@ public class AdvertenciaController: MonoBehaviour
         if (Text.points == 80) GetComponent<TMPro.TextMeshProUGUI>().text = "The 1% of people fine 90 points";
         if (Text.points == 90) GetComponent<TMPro.TextMeshProUGUI>().text = "Your are de Best";
 
+        if (Text.points % 10 == 0) MainController.advertenciaBool = true;
+        Debug.Log(Text.points % 10);
+
 
 
     }

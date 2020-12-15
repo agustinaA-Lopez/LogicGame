@@ -5,7 +5,7 @@ using UnityEngine;
 public class MainController : MonoBehaviour
 {
     public GameObject inicioObj, level1Obj, circuloObj, level2Obj, level3Obj, level4Obj, fondoObj, MenuObj, AdvertenciaObj;
-    public static bool clickOn, silenceMusic, rightAnswer, MenuButton, backButton;
+    public static bool clickOn, silenceMusic, rightAnswer, MenuButton, backButton, advertenciaBool;
     public static int nivel, respuesta;
     public static float tiempo;
     //public static int nivel;
@@ -15,6 +15,7 @@ public class MainController : MonoBehaviour
     public static float tiempoRespuesta = 30;
     public static bool instanciar = true;
     public static bool instanciadorNivel;
+
 
     //public GameObject timeObj;
     //public static int vidas=10;
@@ -29,6 +30,8 @@ public class MainController : MonoBehaviour
         // Level();
         clickOn = true;
         MenuButton = false;
+        advertenciaBool = true;
+        
         //level= Instantiate(inicioObj);
 
 
@@ -134,7 +137,10 @@ public class MainController : MonoBehaviour
             fondo = Instantiate(fondoObj);
             //ventana = Instantiate(mask);
             circulo = Instantiate(circuloObj);
-            advertencia = Instantiate(AdvertenciaObj);
+            if (advertenciaBool) {
+                advertencia = Instantiate(AdvertenciaObj);
+                advertenciaBool = false;
+            }
 
         }
 
