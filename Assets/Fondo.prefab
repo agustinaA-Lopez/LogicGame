@@ -2171,7 +2171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Puntos: {fileID: 4808132667907147502}
   Tiempo: {fileID: 8088950196882697303}
-  dingObj: {fileID: 0}
+  dingObj: {fileID: 611193992067532228, guid: 197a5640c1dc78947ae6ff87968428e1, type: 3}
 --- !u!82 &851285880107769208
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2184,8 +2184,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ae92dfedec935c04aa89cbfaa1101da1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.66
+  m_Pitch: 0.85
   Loop: 1
   Mute: 0
   Spatialize: 0
