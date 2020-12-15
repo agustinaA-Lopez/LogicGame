@@ -11,6 +11,8 @@ public class Text : MonoBehaviour
 
     public static int points = 0;
 
+    public static bool timeOut = false;
+
 
     // Update is called once per frame
     void Update()
@@ -27,28 +29,28 @@ public class Text : MonoBehaviour
             tiempoRespuesta -= Time.deltaTime;
 
             Tiempo.GetComponent<TMPro.TextMeshProUGUI>().text = ((int)tiempoRespuesta).ToString();
+
+
+
             if ((int)tiempoRespuesta == 0)
             {
                 // sonido Ding
                 Ding = Instantiate(dingObj);
                 Ding.GetComponent<AudioSource>().Play();
 
+
+
+                points--;
+
                
                 tiempoRespuesta = 30;
 
                 // sucede lo mismo que cuando apretamos help
-                HelpButtonController.click = true;
+                timeOut = true;
+
                 
         }
         }
-        if (MainController.nivel == -1)
-        {
-            Puntos.GetComponent<TMPro.TextMeshProUGUI>().text = "";
-            Tiempo.GetComponent<TMPro.TextMeshProUGUI>().text = "";
-
-        }
-
-
 
     }
 }
