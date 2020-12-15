@@ -30,7 +30,7 @@ public class MainController : MonoBehaviour
         // Level();
         clickOn = true;
         MenuButton = false;
-        if (Text.points % 10 == 0) MainController.advertenciaBool = true;
+       // if (Text.points % 10 == 0) MainController.advertenciaBool = true;
         
         //level= Instantiate(inicioObj);
 
@@ -111,10 +111,11 @@ public class MainController : MonoBehaviour
 
         }
 
-    }
-    
-    // advertencia Cartel
-    if (Text.tiempoRespuesta < 28) Destroy(advertencia);
+
+        }
+
+        // advertencia Cartel
+        if (Text.tiempoRespuesta < 27) Destroy(advertencia);
     }
     //Controla los niveles
     void Level()
@@ -128,6 +129,7 @@ public class MainController : MonoBehaviour
 
         }
 
+        if (Text.points % 10 == 0) MainController.advertenciaBool = true;
 
         if (nivel >0)
         {
