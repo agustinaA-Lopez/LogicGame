@@ -30,7 +30,7 @@ public class MainController : MonoBehaviour
         // Level();
         clickOn = true;
         MenuButton = false;
-        advertenciaBool = true;
+        if (Text.points % 10 == 0) MainController.advertenciaBool = true;
         
         //level= Instantiate(inicioObj);
 
@@ -125,18 +125,15 @@ public class MainController : MonoBehaviour
             Destroy(circulo);
             Destroy(menu);
             Destroy(fondo);
-            //Destroy(pantallaPrincipal);
-            //Destroy(ventana);
+
         }
 
 
         if (nivel >0)
         {
-        //Instanciar objetos
-            //pantallaPrincipal = Instantiate(pantallaPrincipalObj);
             fondo = Instantiate(fondoObj);
-            //ventana = Instantiate(mask);
             circulo = Instantiate(circuloObj);
+            
             if (advertenciaBool) {
                 advertencia = Instantiate(AdvertenciaObj);
                 advertenciaBool = false;
