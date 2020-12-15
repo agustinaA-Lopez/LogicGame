@@ -98,16 +98,19 @@ public class MainController : MonoBehaviour
 
 
 //Sonido de fondo
+//Sonido de fondo
             if (nivel > 0)
         {
             if (!GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
-            if (GetComponent<AudioSource>().volume < .7f && !silenceMusic) GetComponent<AudioSource>().volume+=.005f;
-            
+            if (GetComponent<AudioSource>().isPlaying && GetComponent<AudioSource>().volume < .7f && !silenceMusic) GetComponent<AudioSource>().volume +=.01f;
+
+        if (GetComponent<AudioSource>().isPlaying)
+        {
+        if (silenceMusic) GetComponent<AudioSource>().volume = 0; 
+
         }
 
-        if (silenceMusic) GetComponent<AudioSource>().volume = 0;
-        else GetComponent<AudioSource>().volume = .7f;
-
+    }
     }
 
     //Controla los niveles
