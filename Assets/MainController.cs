@@ -15,6 +15,7 @@ public class MainController : MonoBehaviour
     public static float tiempoRespuesta = 30;
     public static bool instanciar = true;
     public static bool instanciadorNivel;
+    static int puntosViejos=0;
 
 
     //public GameObject timeObj;
@@ -23,24 +24,39 @@ public class MainController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Lo de abajo sirve para seguir jugando en el nivel en que estaba
+        nivel = PlayerPrefs.GetInt("NIVEL", nivel);
+        Text.points = PlayerPrefs.GetInt("PUNTOS", Text.points);
+
+
+
+
         //rightAnswer = true;
-        nivel = 0;
+
         silenceMusic = false;
         instanciadorNivel = false;
         // Level();
         clickOn = true;
         MenuButton = false;
-       // if (Text.points % 10 == 0) MainController.advertenciaBool = true;
-        
-        //level= Instantiate(inicioObj);
-
-
-
+      
     }
 
     // Update is called once per frame
     void Update()
     {
+       
+
+        //lo de abajo guarda los puntos que tengo para cuando vuelva a jugar
+        if (puntosViejos != Text.points)
+        {
+            PlayerPrefs.SetInt("PUNTOS", Text.points);
+            PlayerPrefs.Save();
+        }
+
+        //DESCOMENTAR PARA JUGAR EL JUEGO DESDE EL PRINCIPIO
+       /* PlayerPrefs.SetInt("NIVEL", 0);
+        PlayerPrefs.SetInt("PUNTOS", 0);*/
+
         if (MenuButton)
         {
             if (nivel > 0)
@@ -91,7 +107,11 @@ public class MainController : MonoBehaviour
             nivel++;
             Level();
 
-        
+            //esto guarda el nivel en que estoy para el proximo juego
+            PlayerPrefs.SetInt("NIVEL", nivel);
+            PlayerPrefs.Save();
+
+
             rightAnswer = false;
 
             instanciadorNivel = false;

@@ -68,6 +68,7 @@
     <Compile Include="Assets\Buttons\HelpButtonController.cs" />
     <Compile Include="Assets\Respuestas\respuestasController.cs" />
     <Compile Include="Assets\Buttons\silenceMusicButton.cs" />
+    <Compile Include="Assets\GuardadorNivel.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
