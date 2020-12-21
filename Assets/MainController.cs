@@ -45,7 +45,7 @@ public class MainController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+
 
         //lo de abajo guarda los puntos que tengo para cuando vuelva a jugar
         if (puntosViejos != Text.points)
@@ -55,8 +55,8 @@ public class MainController : MonoBehaviour
         }
 
         //DESCOMENTAR PARA JUGAR EL JUEGO DESDE EL PRINCIPIO
-       /* PlayerPrefs.SetInt("NIVEL", 0);
-        PlayerPrefs.SetInt("PUNTOS", 0);*/
+        PlayerPrefs.SetInt("NIVEL", 0);
+        PlayerPrefs.SetInt("PUNTOS", 0);
 
         if (MenuButton)
         {
@@ -164,7 +164,6 @@ public class MainController : MonoBehaviour
             if (advertenciaBool) {
                 advertencia = Instantiate(AdvertenciaObj);
                 advertenciaBool = false;
-                noPaso = true;
             }
 
         }
