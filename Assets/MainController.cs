@@ -14,6 +14,7 @@ public class MainController : MonoBehaviour
 
     public static float tiempoRespuesta = 30;
     public static bool instanciar = true;
+    public static bool noPaso = true;
     public static bool instanciadorNivel;
     static int puntosViejos=0;
 
@@ -149,7 +150,11 @@ public class MainController : MonoBehaviour
 
         }
 
-        if (Text.points % 10 == 0) MainController.advertenciaBool = true;
+        if (Text.points % 10 <= 3 && noPaso)
+        {
+            MainController.advertenciaBool = true;
+        }
+
 
         if (nivel >0)
         {
@@ -159,6 +164,7 @@ public class MainController : MonoBehaviour
             if (advertenciaBool) {
                 advertencia = Instantiate(AdvertenciaObj);
                 advertenciaBool = false;
+                noPaso = true;
             }
 
         }
