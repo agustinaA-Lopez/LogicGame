@@ -69,7 +69,13 @@ public class HelpButtonController : MonoBehaviour
         {
             // destruye random respuesta errada si hacemos click en el helpbutton
                 int i = Random.Range(0,(wrongAnswers.Length-1));
-                respuestasController.paraDestruir = wrongAnswers[i];
+                 
+                if (wrongAnswers.Length >2) respuestasController.paraDestruir = wrongAnswers[i]; 
+                else 
+                {
+                    MainController.clickOn = true;
+                    MainController.nivel++;
+                } 
       
                 Text.points--;
                 Text.tiempoRespuesta = 30;
