@@ -28,7 +28,7 @@ public class ventanaController : MonoBehaviour
             {
                 MainController.rightAnswer = true;
                 Text.tiempoRespuesta = 30;
-                Text.points += 11;
+                Text.points += 3;
                 MainController.instanciadorNivel = false;
             }
         } 
