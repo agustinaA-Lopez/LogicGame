@@ -29,8 +29,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    Unity.Timeline.Editor.dll:
-    - TimelineProjectSettings
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -512,7 +510,7 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 74a21aa44d2bab6a0e31bf5b2670b326
+      Hash: d89ad9138cbc95fb9b2ddcd41ea8bb9b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainController
@@ -699,4 +697,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/new project.unity
-  playerPath: C:/UnityDevs/LogicGame-main/logicGame.apk
+  playerPath: C:/UnityDevs/LogicGame/logicGame.apk

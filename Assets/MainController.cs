@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    public GameObject inicioObj, level1Obj, circuloObj, level2Obj, level3Obj, level4Obj, fondoObj, MenuObj, AdvertenciaObj;
+    public GameObject inicioObj, circuloObj, fondoObj, MenuObj, AdvertenciaObj; //level1Obj, level2Obj, level3Obj, level4Obj, level5Obj
     public static bool clickOn, silenceMusic, rightAnswer, MenuButton, backButton, advertenciaBool;
     public static int nivel, respuesta;
     public static float tiempo;
@@ -17,6 +17,8 @@ public class MainController : MonoBehaviour
     public static bool noPaso = true;
     public static bool instanciadorNivel;
     static int puntosViejos=0;
+    int number, asciiLetter;
+    string pregunta;
 
 
     //public GameObject timeObj;
@@ -142,13 +144,10 @@ public class MainController : MonoBehaviour
     void Level()
     {
 
-        {
-            Destroy(level);
-            Destroy(circulo);
-            Destroy(menu);
-            Destroy(fondo);
-
-        }
+        Destroy(level);
+        Destroy(circulo);
+        Destroy(menu);
+        Destroy(fondo);
 
         if (Text.points % 10 <= 3 && noPaso)
         {
@@ -167,40 +166,14 @@ public class MainController : MonoBehaviour
             }
 
         }
+            // INSTANCIAMOS PREGUNTA SEGUN NIVEL
+            pregunta = "p";
+            pregunta += nivel.ToString();
+            if (nivel==0) level = Instantiate(inicioObj);
+            else level = Instantiate(Resources.Load(pregunta, typeof(GameObject))) as GameObject;
 
-        switch (nivel)
-        {
+ }
 
-            case 0:
-                level = Instantiate(inicioObj);
-
-                break;
-
-            case 1 :
-                level = Instantiate(level1Obj);
-                
-                break;
-
-            case 2:
-                level = Instantiate(level2Obj);
-
-                break;
-
-            case 3:
-                level = Instantiate(level3Obj);
-
-                break;
-
-            case 4:
-                level = Instantiate(level4Obj);
-                
-                break;
-        }
-
-
-
-
-}
 }
 
 
