@@ -117,8 +117,9 @@ public class MainController : MonoBehaviour
         }
 
         // advertencia Cartel
-        if (Text.tiempoRespuesta < 25 && nivel == 1) Destroy(advertencia);
-        else if (Text.tiempoRespuesta < 27) Destroy(advertencia);
+        
+        if (nivel == 1 && Text.tiempoRespuesta < 25) Destroy(advertencia);
+        else if (nivel != 1 && Text.tiempoRespuesta < 27) Destroy(advertencia);
     }
     //Controla los niveles
     void Level()
