@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5400899458330039959}
   - component: {fileID: 3803358761434407455}
   m_Layer: 0
-  m_Name: preg 4
+  m_Name: p4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

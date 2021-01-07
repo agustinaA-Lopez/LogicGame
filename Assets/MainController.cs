@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    public GameObject inicioObj, circuloObj, fondoObj, MenuObj, AdvertenciaObj; //level1Obj, level2Obj, level3Obj, level4Obj, level5Obj
+    public GameObject inicioObj, circuloObj, fondoObj, MenuObj, AdvertenciaObj;
     public static bool clickOn, silenceMusic, rightAnswer, MenuButton, backButton, advertenciaBool;
     public static int nivel, respuesta;
     public static float tiempo;
@@ -31,24 +31,15 @@ public class MainController : MonoBehaviour
         nivel = PlayerPrefs.GetInt("NIVEL", nivel);
         Text.points = PlayerPrefs.GetInt("PUNTOS", Text.points);
 
-
-
-
-        //rightAnswer = true;
-
         silenceMusic = false;
         instanciadorNivel = false;
-        // Level();
         clickOn = true;
         MenuButton = false;
-      
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
         //lo de abajo guarda los puntos que tengo para cuando vuelva a jugar
         if (puntosViejos != Text.points)
         {
@@ -64,20 +55,18 @@ public class MainController : MonoBehaviour
         {
             if (nivel > 0)
             {
-            circulo.SetActive(false);
-            
-            fondo.SetActive(false);
+                circulo.SetActive(false);      
+                fondo.SetActive(false);
             }
-        level.SetActive(false);
-        menu = Instantiate(MenuObj);
-                
-        MenuButton = false;
+
+            level.SetActive(false);
+            menu = Instantiate(MenuObj);         
+            MenuButton = false;
         }
         
         
         if (backButton)
         {
-            //Destroy(backButton);
             Destroy(menu);
             
             if (nivel > 0)
@@ -95,18 +84,13 @@ public class MainController : MonoBehaviour
         if (clickOn)
         {
             Level();
-
             clickOn = false;
-
-            // rightAnswer = false;
-
         }
 
 
         if (rightAnswer)
         {
             Destroy(level);
-
             nivel++;
             Level();
 
@@ -114,31 +98,27 @@ public class MainController : MonoBehaviour
             PlayerPrefs.SetInt("NIVEL", nivel);
             PlayerPrefs.Save();
 
-
             rightAnswer = false;
-
             instanciadorNivel = false;
-
         }
 
 
-//Sonido de fondo
+        //Sonido de fondo
             if (nivel > 0)
         {
             if (!GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
             if (GetComponent<AudioSource>().isPlaying && GetComponent<AudioSource>().volume < .7f && !silenceMusic) GetComponent<AudioSource>().volume +=.01f;
 
-        if (GetComponent<AudioSource>().isPlaying)
-        {
-        if (silenceMusic) GetComponent<AudioSource>().volume = 0; 
+            if (GetComponent<AudioSource>().isPlaying)
+            {
+                if (silenceMusic) GetComponent<AudioSource>().volume = 0; 
 
-        }
-
-
+            }
         }
 
         // advertencia Cartel
-        if (Text.tiempoRespuesta < 27) Destroy(advertencia);
+        if (Text.tiempoRespuesta < 25 && nivel == 1) Destroy(advertencia);
+        else if (Text.tiempoRespuesta < 27) Destroy(advertencia);
     }
     //Controla los niveles
     void Level()
@@ -160,16 +140,17 @@ public class MainController : MonoBehaviour
             fondo = Instantiate(fondoObj);
             circulo = Instantiate(circuloObj);
             
-            if (advertenciaBool) {
+            if (advertenciaBool) 
+            {
                 advertencia = Instantiate(AdvertenciaObj);
                 advertenciaBool = false;
             }
 
         }
             // INSTANCIAMOS PREGUNTA SEGUN NIVEL
-            pregunta = "p";
-            pregunta += nivel.ToString();
-            if (nivel==0) level = Instantiate(inicioObj);
+            
+            pregunta = "p" + nivel.ToString();
+            if (nivel==0) {level = Instantiate(inicioObj); advertenciaBool = true;}
             else level = Instantiate(Resources.Load(pregunta, typeof(GameObject))) as GameObject;
 
  }

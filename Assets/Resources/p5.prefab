@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5790833039889261916}
   - component: {fileID: 8919219634356071556}
   m_Layer: 0
-  m_Name: pregunta5
+  m_Name: p5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
