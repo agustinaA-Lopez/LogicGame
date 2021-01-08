@@ -11,7 +11,7 @@ public class AdvertenciaController: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (MainController.nivel == 1) {GetComponent<TMPro.TextMeshProUGUI>().text = "move the wheel to find the missing piece\n & check on the righ answer"; GetComponent<TMPro.TextMeshProUGUI>().fontSize = 100;}
+        if (MainController.nivel == 1) {GetComponent<TMPro.TextMeshProUGUI>().text = "move the wheel to find the missing piece\n & check on the right answer"; GetComponent<TMPro.TextMeshProUGUI>().fontSize = 140;}
 
         if (Text.points <= 3 && MainController.nivel != 1) {GetComponent<TMPro.TextMeshProUGUI>().text = "The 90% of people get 10 points"; MainController.noPaso= false;}
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class MainController : MonoBehaviour
 {
     public GameObject inicioObj, circuloObj, fondoObj, MenuObj, AdvertenciaObj;
-    public static bool clickOn, silenceMusic, rightAnswer, MenuButton, backButton, advertenciaBool;
+    public static bool clickOn, silenceMusic, silenceGame, rightAnswer, MenuButton, backButton, advertenciaBool;
     public static int nivel, respuesta;
     public static float tiempo;
     //public static int nivel;
@@ -103,15 +103,15 @@ public class MainController : MonoBehaviour
         }
 
 
-        //Sonido de fondo
+        //Sonido musica
             if (nivel > 0)
         {
             if (!GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
-            if (GetComponent<AudioSource>().isPlaying && GetComponent<AudioSource>().volume < .7f && !silenceMusic) GetComponent<AudioSource>().volume +=.01f;
+            if (GetComponent<AudioSource>().isPlaying && GetComponent<AudioSource>().volume < .7f && (!silenceMusic || !silenceGame)) GetComponent<AudioSource>().volume +=.01f;
 
             if (GetComponent<AudioSource>().isPlaying)
             {
-                if (silenceMusic) GetComponent<AudioSource>().volume = 0; 
+                if (silenceMusic || silenceGame) GetComponent<AudioSource>().volume = 0; 
 
             }
         }

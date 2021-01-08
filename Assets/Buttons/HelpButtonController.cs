@@ -39,8 +39,13 @@ public class HelpButtonController : MonoBehaviour
 
         click = true;
         // sonido click para saber que se elimino respuesta
-        GameObject clickOnSound = Instantiate(ClickOnSoundObj);
-        clickOnSound.GetComponent<AudioSource>().Play();
+        if (!MainController.silenceGame) 
+        {
+            GameObject clickOnSound = Instantiate(ClickOnSoundObj);
+            clickOnSound.GetComponent<AudioSource>().Play();
+            Vibration1.Vibrate(1);
+        }
+        click = true;
 
     }
 

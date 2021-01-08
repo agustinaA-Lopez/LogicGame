@@ -30,14 +30,21 @@ public class Text : MonoBehaviour
 
             Tiempo.GetComponent<TMPro.TextMeshProUGUI>().text = ((int)tiempoRespuesta).ToString();
 
+            if (!MainController.silenceGame) 
+            {
+                if (!GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
+            }
+
 
 
             if ((int)tiempoRespuesta == 0)
             {
                 // sonido Ding
-                Ding = Instantiate(dingObj);
-                Ding.GetComponent<AudioSource>().Play();
-
+                if (!MainController.silenceGame)
+                {
+                    Ding = Instantiate(dingObj);
+                    Ding.GetComponent<AudioSource>().Play();
+                }
 
 
                 points--;

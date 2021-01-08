@@ -26,10 +26,12 @@ public class MenuButtonController : MonoBehaviour
     void OnMouseDown(){
 
         //sound on click
-        GameObject clickOnSound = Instantiate(ClickOnSoundObj);
-        clickOnSound.GetComponent<AudioSource>().Play();
-
-       
+        if (!MainController.silenceGame) 
+        {
+            GameObject clickOnSound = Instantiate(ClickOnSoundObj);
+            clickOnSound.GetComponent<AudioSource>().Play();
+            Vibration1.Vibrate(1);
+        }
         
         click = true;
         

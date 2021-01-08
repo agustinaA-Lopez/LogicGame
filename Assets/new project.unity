@@ -403,7 +403,7 @@ MonoBehaviour:
   circuloObj: {fileID: 6949069833223495145, guid: 4c6c04874b3170642af9e0001e2ccf6b, type: 3}
   fondoObj: {fileID: 8798910687077664765, guid: 36c117f8ca84a0147a852b62c2c5a5dd, type: 3}
   MenuObj: {fileID: 7491219228876962878, guid: 9b2a67138d044e14197e29db17a2c7e7, type: 3}
-  AdvertenciaObj: {fileID: 486016055651063349, guid: 06c875823a686984081db7bd89adab0f, type: 3}
+  AdvertenciaObj: {fileID: 5128697260874820060, guid: 06c875823a686984081db7bd89adab0f, type: 3}
 --- !u!4 &2027199789
 Transform:
   m_ObjectHideFlags: 0

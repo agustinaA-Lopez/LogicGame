@@ -51,19 +51,26 @@ Vector3 control;
         }
     }
 
-
+    
     void OnMouseDrag()
     {
 
         // mueve la rueda llamando a la funcion getAngle().
         
 
-        if (!WheelButtonController.use){
-       
+        if (!WheelButtonController.use)
+        {
         //play sound on turning weel
-        if (!GetComponent<AudioSource>().isPlaying && Input.mousePosition!=control) GetComponent<AudioSource>().Play();
+            if (!MainController.silenceGame)
+            {
+                if (!GetComponent<AudioSource>().isPlaying && Input.mousePosition!=control) 
+                {
+                    GetComponent<AudioSource>().Play();
+                    //Vibration1.Vibrate(1);
+                }
+            }
              
-
+        
         //move the wheel
         float angle;
         angle = getAngle();

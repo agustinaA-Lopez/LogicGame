@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3874726074221341347}
   - component: {fileID: 152044867767268150}
+  - component: {fileID: 4625929143418304730}
+  - component: {fileID: 2380856154975138536}
   m_Layer: 0
   m_Name: SilenceGameButton
   m_TagString: Untagged
@@ -82,6 +84,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4625929143418304730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291086234894226537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccfff4d7e13d4e54bb42c4a0bdb66958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 0}
+  ClickOnSoundObj: {fileID: 8930233890023826990, guid: 29cedde1809a6254184db187424386ca, type: 3}
+--- !u!58 &2380856154975138536
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291086234894226537}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.6
 --- !u!1 &4332249929915420789
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,7 +526,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: 0.00000023841858}
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 0.6
 --- !u!114 &2875003431255964351
 MonoBehaviour:
   m_ObjectHideFlags: 0
