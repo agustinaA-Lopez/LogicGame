@@ -28,7 +28,7 @@ public class AdvertenciaController: MonoBehaviour
         if (Text.points == 80) GetComponent<TMPro.TextMeshProUGUI>().text = "The 1% of people get 90 points";
         if (Text.points == 90) GetComponent<TMPro.TextMeshProUGUI>().text = "You're a freaking genius!!";
 
-        if (Text.points % 10 > 3 && Text.points % 10 <= 9) MainController.noPaso = true;
+      //  if (Text.points % 10 > 3 && Text.points % 10 <= 9) MainController.noPaso = true;
 
 
 

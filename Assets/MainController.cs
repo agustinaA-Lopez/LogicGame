@@ -120,6 +120,9 @@ public class MainController : MonoBehaviour
         
         if (nivel == 1 && Text.tiempoRespuesta < 25) Destroy(advertencia);
         else if (nivel != 1 && Text.tiempoRespuesta < 27) Destroy(advertencia);
+
+        if (Text.points % 10 > 3 && Text.points % 10 <= 9) MainController.noPaso = true;
+
     }
     //Controla los niveles
     void Level()

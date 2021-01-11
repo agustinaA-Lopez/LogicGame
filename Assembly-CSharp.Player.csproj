@@ -58,17 +58,19 @@
   <ItemGroup>
     <Compile Include="Assets\ventanaController.cs" />
     <Compile Include="Assets\Buttons\MenuButtonController.cs" />
+    <Compile Include="Assets\GuardadorNivel.cs" />
     <Compile Include="Assets\Buttons\PlayButtonController.cs" />
     <Compile Include="Assets\Buttons\BackButtonController.cs" />
     <Compile Include="Assets\AdvertenciaController.cs" />
     <Compile Include="Assets\DestroyOnSoundEnd.cs" />
+    <Compile Include="Assets\Buttons\silelenceGameButtonController.cs" />
     <Compile Include="Assets\Buttons\WheelButtonController.cs" />
     <Compile Include="Assets\Text.cs" />
     <Compile Include="Assets\MainController.cs" />
+    <Compile Include="Assets\Respuestas\Vibration.cs" />
     <Compile Include="Assets\Buttons\HelpButtonController.cs" />
     <Compile Include="Assets\Respuestas\respuestasController.cs" />
     <Compile Include="Assets\Buttons\silenceMusicButton.cs" />
-    <Compile Include="Assets\GuardadorNivel.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
