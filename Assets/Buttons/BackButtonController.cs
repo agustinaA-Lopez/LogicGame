@@ -28,7 +28,7 @@ public class BackButtonController : MonoBehaviour
         {
             GameObject clickOnSound = Instantiate(ClickOnSoundObj);
             clickOnSound.GetComponent<AudioSource>().Play();
-            Vibration.Vibrate(10);
+            Vibration.Vibrate(1);
         }
         
         click = true;

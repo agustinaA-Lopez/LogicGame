@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    public GameObject inicioObj, circuloObj, fondoObj, MenuObj, AdvertenciaObj;
+    public GameObject inicioObj, circuloObj, fondoObj, MenuObj, AdvertenciaObj, PanelObj;
     public static bool clickOn, silenceMusic, silenceGame, rightAnswer, MenuButton, backButton, advertenciaBool;
     public static int nivel, respuesta;
     public static float tiempo;
     //public static int nivel;
-    private GameObject circulo, fondo, menu, level, advertencia;
+    private GameObject circulo, fondo, menu, level, advertencia, panel;
 
 
     public static float tiempoRespuesta = 30;
@@ -117,9 +117,11 @@ public class MainController : MonoBehaviour
         }
 
         // advertencia Cartel
-        
-        if (nivel == 1 && Text.tiempoRespuesta < 25) Destroy(advertencia);
+        panel = GameObject.FindGameObjectWithTag("panel");
+        if (nivel == 1 && Text.tiempoRespuesta < 25 || respuestasController.click) {Destroy(advertencia); respuestasController.click = false;}
         else if (nivel != 1 && Text.tiempoRespuesta < 27) Destroy(advertencia);
+        
+        else if (nivel > 1) panel.transform.localScale = new Vector3(1F, .5f, 0);
 
         if (Text.points % 10 > 3 && Text.points % 10 <= 9) MainController.noPaso = true;
 

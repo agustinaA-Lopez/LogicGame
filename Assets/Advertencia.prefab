@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 9624753294192211}
   m_Layer: 5
   m_Name: Panel
-  m_TagString: Untagged
+  m_TagString: panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,15 +299,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 160
-  m_fontSizeBase: 160
+  m_fontSize: 180
+  m_fontSizeBase: 180
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 17
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 4096
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -353,4 +353,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e8a91751dafa664f94eaa2a6971740e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  advertencia: {fileID: 0}

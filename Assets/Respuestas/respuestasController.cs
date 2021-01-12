@@ -15,8 +15,7 @@ private GameObject respuesta;
 public static GameObject paraDestruir;
 string secondObj, answer;
 int number, asciiLetter;
-
-bool click;
+public static bool click;
 
     void Start()
     {
@@ -26,15 +25,14 @@ bool click;
         
     }
 Vector3 control;
-    //The mesh fades of when the mouse is over it...
+    //The mesh fades off when the mouse is over it...
     void OnMouseDown()
     {
          // para no confundir boton con rueda usamos  ButtonControoller.use
          // ubica la posicion del angulo de la rueda
     
-        if (!WheelButtonController.use) {startAngle = getAngle() - transform.rotation.eulerAngles.z;
-      
-       }
+        if (!WheelButtonController.use) startAngle = getAngle() - transform.rotation.eulerAngles.z;
+        click = true;
     }
 
     void Update ()
@@ -52,7 +50,7 @@ Vector3 control;
     }
 
     
-    void OnMouseDrag()
+    public void OnMouseDrag()
     {
 
         // mueve la rueda llamando a la funcion getAngle().
@@ -66,7 +64,7 @@ Vector3 control;
                 if (!GetComponent<AudioSource>().isPlaying && Input.mousePosition!=control) 
                 {
                     GetComponent<AudioSource>().Play();
-                    //Vibration1.Vibrate(1);
+                    Vibration.Vibrate(1);
                 }
             }
              
