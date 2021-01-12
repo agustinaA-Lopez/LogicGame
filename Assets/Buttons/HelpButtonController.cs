@@ -83,7 +83,7 @@ public class HelpButtonController : MonoBehaviour
                 } 
       
                 Text.points--;
-                Text.tiempoRespuesta = 30;
+                Text.tiempoRespuesta = 60;
 
                 click = false;
                 Text.timeOut = false;

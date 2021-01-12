@@ -48,8 +48,8 @@ public class MainController : MonoBehaviour
         }
 
         //DESCOMENTAR PARA JUGAR EL JUEGO DESDE EL PRINCIPIO
-        PlayerPrefs.SetInt("NIVEL", 0);
-        PlayerPrefs.SetInt("PUNTOS", 0);
+       /* PlayerPrefs.SetInt("NIVEL", 0);
+        PlayerPrefs.SetInt("PUNTOS", 0);*/
 
         if (MenuButton)
         {
@@ -118,10 +118,10 @@ public class MainController : MonoBehaviour
 
         // advertencia Cartel
         panel = GameObject.FindGameObjectWithTag("panel");
-        if (nivel == 1 && Text.tiempoRespuesta < 25 || respuestasController.click) {Destroy(advertencia); respuestasController.click = false;}
-        else if (nivel != 1 && Text.tiempoRespuesta < 27) Destroy(advertencia);
+        if (nivel == 1 && Text.tiempoRespuesta < 55 || respuestasController.click) {Destroy(advertencia); respuestasController.click = false;}
+        else if (nivel != 1 && Text.tiempoRespuesta < 57) Destroy(advertencia);
         
-        else if (nivel > 1) panel.transform.localScale = new Vector3(1F, .5f, 0);
+        //else if (nivel > 1) panel.transform.localScale = new Vector3(1F, .5f, 0);
 
         if (Text.points % 10 > 3 && Text.points % 10 <= 9) MainController.noPaso = true;
 
@@ -160,6 +160,7 @@ public class MainController : MonoBehaviour
             else level = Instantiate(Resources.Load(pregunta, typeof(GameObject))) as GameObject;
 
  }
+    
 
 }
 

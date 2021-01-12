@@ -27,7 +27,7 @@ public class ventanaController : MonoBehaviour
             if (mySR.bounds.Intersects(rightAnswerSR.bounds) && MainController.instanciadorNivel)
             {
                 MainController.rightAnswer = true;
-                Text.tiempoRespuesta = 30;
+                Text.tiempoRespuesta = 60;
                 Text.points += 3;
                 MainController.instanciadorNivel = false;
             }
@@ -44,7 +44,7 @@ public class ventanaController : MonoBehaviour
                 respuestasController.paraDestruir = wrongAnswer;
                 MainController.rightAnswer = false;
                 MainController.clickOn = false;
-                Text.tiempoRespuesta = 30;
+                Text.tiempoRespuesta = 60;
                 Text.points -= 2;
                 MainController.instanciadorNivel = false;
             }

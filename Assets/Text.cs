@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Text : MonoBehaviour
 {
-    public static float tiempoRespuesta = 30;
+    public static float tiempoRespuesta = 60;
 
     public GameObject Puntos, Tiempo, dingObj;
     GameObject Ding;
@@ -51,7 +51,7 @@ public class Text : MonoBehaviour
                 points--;
 
                
-                tiempoRespuesta = 30;
+                tiempoRespuesta = 60;
 
                 // sucede lo mismo que cuando apretamos help
                 timeOut = true;
