@@ -69,51 +69,51 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11848}
+      Script: {instanceID: 11842}
     - Class: 114
-      Script: {instanceID: 11866}
+      Script: {instanceID: 11860}
     - Class: 114
-      Script: {instanceID: 12194}
+      Script: {instanceID: 12188}
     - Class: 114
-      Script: {instanceID: 12228}
+      Script: {instanceID: 12222}
     - Class: 114
-      Script: {instanceID: 12940}
+      Script: {instanceID: 12934}
     - Class: 114
-      Script: {instanceID: 12942}
+      Script: {instanceID: 12936}
     - Class: 114
-      Script: {instanceID: 12976}
+      Script: {instanceID: 12970}
     - Class: 114
-      Script: {instanceID: 13002}
+      Script: {instanceID: 12996}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 13066}
     - Class: 114
-      Script: {instanceID: 13444}
+      Script: {instanceID: 13438}
     - Class: 114
-      Script: {instanceID: 13540}
+      Script: {instanceID: 13534}
     - Class: 114
-      Script: {instanceID: 13830}
+      Script: {instanceID: 13824}
     - Class: 114
-      Script: {instanceID: 13878}
+      Script: {instanceID: 13872}
     - Class: 114
-      Script: {instanceID: 14100}
+      Script: {instanceID: 14094}
     - Class: 114
-      Script: {instanceID: 14104}
+      Script: {instanceID: 14098}
     - Class: 114
-      Script: {instanceID: 14124}
+      Script: {instanceID: 14118}
     - Class: 114
-      Script: {instanceID: 14444}
+      Script: {instanceID: 14438}
     - Class: 114
-      Script: {instanceID: 14550}
+      Script: {instanceID: 14544}
     - Class: 114
-      Script: {instanceID: 14844}
+      Script: {instanceID: 14838}
     - Class: 114
-      Script: {instanceID: 15060}
+      Script: {instanceID: 15054}
     - Class: 114
-      Script: {instanceID: 15110}
+      Script: {instanceID: 15104}
     - Class: 114
-      Script: {instanceID: 15190}
+      Script: {instanceID: 15184}
     - Class: 114
-      Script: {instanceID: 15214}
+      Script: {instanceID: 15208}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 123
@@ -513,7 +513,7 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: ca3c2a71938e283af328877d98760683
+      Hash: d89ad9138cbc95fb9b2ddcd41ea8bb9b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainController
@@ -706,4 +706,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/new project.unity
-  playerPath: C:/Users/carra/Desktop/LogicGame.apk
+  playerPath: C:/UnityDevs/LogicGame/logicGame.apk

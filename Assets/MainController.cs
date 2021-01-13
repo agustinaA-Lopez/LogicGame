@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    public GameObject inicioObj, circuloObj, fondoObj, MenuObj, AdvertenciaObj, PanelObj;
+    public GameObject inicioObj, circuloObj, fondoObj, MenuObj, AdvertenciaObj;
     public static bool clickOn, silenceMusic, silenceGame, rightAnswer, MenuButton, backButton, advertenciaBool;
     public static int nivel, respuesta;
     public static float tiempo;
@@ -43,13 +43,13 @@ public class MainController : MonoBehaviour
         //lo de abajo guarda los puntos que tengo para cuando vuelva a jugar
         if (puntosViejos != Text.points)
         {
-            PlayerPrefs.SetInt("PUNTOS", Text.points);
-            PlayerPrefs.Save();
+            /*PlayerPrefs.SetInt("PUNTOS", Text.points);
+            PlayerPrefs.Save();*/
         }
 
         //DESCOMENTAR PARA JUGAR EL JUEGO DESDE EL PRINCIPIO
-       /* PlayerPrefs.SetInt("NIVEL", 0);
-        PlayerPrefs.SetInt("PUNTOS", 0);*/
+        PlayerPrefs.SetInt("NIVEL", 0);
+        PlayerPrefs.SetInt("PUNTOS", 0);
 
         if (MenuButton)
         {
@@ -95,8 +95,8 @@ public class MainController : MonoBehaviour
             Level();
 
             //esto guarda el nivel en que estoy para el proximo juego
-            PlayerPrefs.SetInt("NIVEL", nivel);
-            PlayerPrefs.Save();
+            /*PlayerPrefs.SetInt("NIVEL", nivel);
+            PlayerPrefs.Save();*/
 
             rightAnswer = false;
             instanciadorNivel = false;
@@ -117,11 +117,8 @@ public class MainController : MonoBehaviour
         }
 
         // advertencia Cartel
-        panel = GameObject.FindGameObjectWithTag("panel");
         if (nivel == 1 && Text.tiempoRespuesta < 55 || respuestasController.click) {Destroy(advertencia); respuestasController.click = false;}
         else if (nivel != 1 && Text.tiempoRespuesta < 57) Destroy(advertencia);
-        
-        //else if (nivel > 1) panel.transform.localScale = new Vector3(1F, .5f, 0);
 
         if (Text.points % 10 > 3 && Text.points % 10 <= 9) MainController.noPaso = true;
 
@@ -149,6 +146,8 @@ public class MainController : MonoBehaviour
             if (advertenciaBool) 
             {
                 advertencia = Instantiate(AdvertenciaObj);
+                panel = GameObject.FindGameObjectWithTag("panel");
+                if (nivel > 1) panel.transform.localScale = new Vector3(1F, .5f, 0);
                 advertenciaBool = false;
             }
 
