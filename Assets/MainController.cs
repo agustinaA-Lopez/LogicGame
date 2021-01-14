@@ -43,39 +43,39 @@ public class MainController : MonoBehaviour
         //lo de abajo guarda los puntos que tengo para cuando vuelva a jugar
         if (puntosViejos != Text.points)
         {
-            /*PlayerPrefs.SetInt("PUNTOS", Text.points);
-            PlayerPrefs.Save();*/
+            PlayerPrefs.SetInt("PUNTOS", Text.points);
+            PlayerPrefs.Save();
         }
 
         //DESCOMENTAR PARA JUGAR EL JUEGO DESDE EL PRINCIPIO
-        PlayerPrefs.SetInt("NIVEL", 0);
-        PlayerPrefs.SetInt("PUNTOS", 0);
+        /*PlayerPrefs.SetInt("NIVEL", 0);
+        PlayerPrefs.SetInt("PUNTOS", 0);*/
 
         if (MenuButton)
         {
             if (nivel > 0)
             {
-                circulo.SetActive(false);      
+                circulo.SetActive(false);
                 fondo.SetActive(false);
             }
 
             level.SetActive(false);
-            menu = Instantiate(MenuObj);         
+            menu = Instantiate(MenuObj);
             MenuButton = false;
         }
-        
-        
+
+
         if (backButton)
         {
             Destroy(menu);
-            
+
             if (nivel > 0)
             {
                 circulo.SetActive(true);
-                fondo.SetActive(true);     
-            } 
+                fondo.SetActive(true);
+            }
 
-            level.SetActive(true);  
+            level.SetActive(true);
             backButton = false;
 
         }
@@ -95,8 +95,8 @@ public class MainController : MonoBehaviour
             Level();
 
             //esto guarda el nivel en que estoy para el proximo juego
-            /*PlayerPrefs.SetInt("NIVEL", nivel);
-            PlayerPrefs.Save();*/
+            PlayerPrefs.SetInt("NIVEL", nivel);
+            PlayerPrefs.Save();
 
             rightAnswer = false;
             instanciadorNivel = false;
@@ -104,24 +104,37 @@ public class MainController : MonoBehaviour
 
 
         //Sonido musica
-            if (nivel > 0)
+        if (nivel > 0)
         {
             if (!GetComponent<AudioSource>().isPlaying) GetComponent<AudioSource>().Play();
-            if (GetComponent<AudioSource>().isPlaying && GetComponent<AudioSource>().volume < .7f && (!silenceMusic || !silenceGame)) GetComponent<AudioSource>().volume +=.01f;
+            if (GetComponent<AudioSource>().isPlaying && GetComponent<AudioSource>().volume < .7f && (!silenceMusic || !silenceGame)) GetComponent<AudioSource>().volume += .01f;
 
             if (GetComponent<AudioSource>().isPlaying)
             {
-                if (silenceMusic || silenceGame) GetComponent<AudioSource>().volume = 0; 
+                if (silenceMusic || silenceGame) GetComponent<AudioSource>().volume = 0;
 
             }
         }
 
         // advertencia Cartel
-        if (nivel == 1 && Text.tiempoRespuesta < 55 || respuestasController.click) {Destroy(advertencia); respuestasController.click = false;}
+        if (nivel == 1 && Text.tiempoRespuesta < 55 || respuestasController.click) { Destroy(advertencia); respuestasController.click = false; }
         else if (nivel != 1 && Text.tiempoRespuesta < 57) Destroy(advertencia);
 
         if (Text.points % 10 > 3 && Text.points % 10 <= 9) MainController.noPaso = true;
 
+
+        //Controla el boton back del celular
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                // Insert Code Here (I.E. Load Scene, Etc)
+                Application.Quit();
+
+                //return;
+            }
+
+        }
     }
     //Controla los niveles
     void Level()
@@ -159,7 +172,6 @@ public class MainController : MonoBehaviour
             else level = Instantiate(Resources.Load(pregunta, typeof(GameObject))) as GameObject;
 
  }
-    
 
 }
 
