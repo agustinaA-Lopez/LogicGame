@@ -47,8 +47,8 @@ public class MainController : MonoBehaviour
         }
 
         //DESCOMENTAR PARA JUGAR EL JUEGO DESDE EL PRINCIPIO
-        //PlayerPrefs.SetInt("NIVEL", 0);
-        //PlayerPrefs.SetInt("PUNTOS", 0);
+       /* PlayerPrefs.SetInt("NIVEL", 0);
+        PlayerPrefs.SetInt("PUNTOS", 0);*/
 
         if (MenuButton)
         {
@@ -151,7 +151,7 @@ public class MainController : MonoBehaviour
         Destroy(menu);
         Destroy(fondo);
 
-        /*if (PlayerPrefs.GetInt("PUNTOS", Text.points) % 10 <= 3 && noPaso)
+       /* if (PlayerPrefs.GetInt("PUNTOS", Text.points) % 10 <= 3 && noPaso)
         {
             MainController.advertenciaBool = true;
         }*/
@@ -163,7 +163,7 @@ public class MainController : MonoBehaviour
             circulo = Instantiate(circuloObj);
             
            // if (advertenciaBool) 
-            if (PlayerPrefs.GetInt("PUNTOS", Text.points) % 10 <= 3 && noPaso)
+            if ((PlayerPrefs.GetInt("PUNTOS", Text.points) % 10 <= 3)==true && noPaso)
             {
                 advertencia = Instantiate(AdvertenciaObj);
                 panel = GameObject.FindGameObjectWithTag("panel");
