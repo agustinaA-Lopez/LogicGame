@@ -16,7 +16,7 @@ public class MainController : MonoBehaviour
     public static bool instanciar = true;
     public static bool noPaso = true;
     public static bool instanciadorNivel;
-    static int puntosViejos=0;
+    public static int puntosViejos=0;
     int number, asciiLetter;
     string pregunta;
 
@@ -28,8 +28,7 @@ public class MainController : MonoBehaviour
     void Start()
     {
         //Lo de abajo sirve para seguir jugando en el nivel en que estaba
-        nivel = PlayerPrefs.GetInt("NIVEL", nivel);
-        Text.points = PlayerPrefs.GetInt("PUNTOS", Text.points);
+        
 
         silenceMusic = false;
         instanciadorNivel = false;
@@ -48,11 +47,12 @@ public class MainController : MonoBehaviour
         }
 
         //DESCOMENTAR PARA JUGAR EL JUEGO DESDE EL PRINCIPIO
-        /*PlayerPrefs.SetInt("NIVEL", 0);
-        PlayerPrefs.SetInt("PUNTOS", 0);*/
+        //PlayerPrefs.SetInt("NIVEL", 0);
+        //PlayerPrefs.SetInt("PUNTOS", 0);
 
         if (MenuButton)
         {
+            Destroy(advertencia);
             if (nivel > 0)
             {
                 circulo.SetActive(false);
@@ -118,18 +118,24 @@ public class MainController : MonoBehaviour
 
         // advertencia Cartel
         if (nivel == 1 && Text.tiempoRespuesta < 55 || respuestasController.click) { Destroy(advertencia); respuestasController.click = false; }
-        else if (nivel != 1 && Text.tiempoRespuesta < 57) Destroy(advertencia);
+        if (nivel != 1 && Text.tiempoRespuesta < 57) Destroy(advertencia);
 
-        if (Text.points % 10 > 3 && Text.points % 10 <= 9) MainController.noPaso = true;
+        if (Text.points % 10 > 3 && Text.points % 10 <= 9) noPaso = true;
 
 
         //Controla el boton back del celular
         if (Application.platform == RuntimePlatform.Android)
         {
-            if (Input.GetKey(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape))
+            
             {
+                Vibration.Vibrate(1);
                 // Insert Code Here (I.E. Load Scene, Etc)
-                Application.Quit();
+                if (menu != null) backButton = true;
+                else if (nivel != 0) {nivel = 0; Level();}
+                else Application.Quit();
+                if (advertencia != null) Destroy(advertencia);
+
 
                 //return;
             }
@@ -145,10 +151,10 @@ public class MainController : MonoBehaviour
         Destroy(menu);
         Destroy(fondo);
 
-        if (Text.points % 10 <= 3 && noPaso)
+        /*if (PlayerPrefs.GetInt("PUNTOS", Text.points) % 10 <= 3 && noPaso)
         {
             MainController.advertenciaBool = true;
-        }
+        }*/
 
 
         if (nivel >0)
@@ -156,7 +162,8 @@ public class MainController : MonoBehaviour
             fondo = Instantiate(fondoObj);
             circulo = Instantiate(circuloObj);
             
-            if (advertenciaBool) 
+           // if (advertenciaBool) 
+            if (PlayerPrefs.GetInt("PUNTOS", Text.points) % 10 <= 3 && noPaso)
             {
                 advertencia = Instantiate(AdvertenciaObj);
                 panel = GameObject.FindGameObjectWithTag("panel");

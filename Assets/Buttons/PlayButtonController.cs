@@ -52,7 +52,12 @@ public class PlayButtonController : MonoBehaviour
         {
 
             MainController.clickOn = true;
-            MainController.nivel ++;
+           if ((PlayerPrefs.GetInt("NIVEL", MainController.nivel)!= 0) )
+           {
+                MainController.nivel = PlayerPrefs.GetInt("NIVEL", MainController.nivel);
+                Text.points = PlayerPrefs.GetInt("PUNTOS", Text.points);
+           } else MainController.nivel =1;
+            //MainController.nivel ++;
             click = false;
 
         }
