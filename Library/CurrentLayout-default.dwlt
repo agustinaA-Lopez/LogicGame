@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 110
+  controlID: 111
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 17
+  controlID: 112
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 18
+  controlID: 113
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,20 +343,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Resources
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Resources
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\carra\Desktop\unity\JuegoAgustin\LogicGame
+  m_LastProjectPath: C:\UnityDevs\LogicGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 30}
-    m_SelectedIDs: 5c480000
-    m_LastClickedID: 18524
+    m_SelectedIDs: 68480000
+    m_LastClickedID: 18536
     m_ExpandedIDs: 000000005c4800005e48000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000000000007a440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -437,7 +437,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 89}
+    m_ScrollPosition: {x: 0, y: 1164.5}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -509,7 +509,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d08dffffe48dffffb48effff98ceffff
+      m_ExpandedIDs: c02affffd42affff78b8ffff8cb8ffff62b9ffff98ceffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 4.116938, y: 0.7182202, z: -41.650116}
     speed: 2
-    m_Value: {x: 4.116938, y: 0.7182202, z: -41.650116}
+    m_Value: {x: -2.7848983, y: 2.9970157, z: -1.7875763}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -624,7 +624,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 4.2358427
     speed: 2
-    m_Value: 4.2358427
+    m_Value: 4.152137
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -680,7 +680,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1080, y: 2160}
+  m_TargetSize: {x: 2115.1653, y: 4230.3306}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -695,10 +695,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -540
-    m_HBaseRangeMax: 540
-    m_VBaseRangeMin: -1080
-    m_VBaseRangeMax: 1080
+    m_HBaseRangeMin: -1057.5826
+    m_HBaseRangeMax: 1057.5826
+    m_VBaseRangeMin: -2115.1653
+    m_VBaseRangeMax: 2115.1653
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -718,7 +718,7 @@ MonoBehaviour:
       y: 21
       width: 797
       height: 306
-    m_Scale: {x: 0.14166667, y: 0.14166667}
+    m_Scale: {x: 0.072334774, y: 0.072334774}
     m_Translation: {x: 398.5, y: 153}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -726,12 +726,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -2812.9412
-      y: -1080
-      width: 5625.8823
-      height: 2160
+      x: -5509.107
+      y: -2115.1653
+      width: 11018.214
+      height: 4230.3306
     m_MinimalGUI: 1
-  m_defaultScale: 0.14166667
+  m_defaultScale: 0.072334774
   m_LastWindowPixelSize: {x: 797, y: 327}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1

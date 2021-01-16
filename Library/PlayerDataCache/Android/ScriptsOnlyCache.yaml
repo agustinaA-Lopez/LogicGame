@@ -706,4 +706,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/new project.unity
-  playerPath: C:/Users/carra/Desktop/LogicGame.apk
+  playerPath: C:/UnityDevs/LogicGame/logicGame.apk
