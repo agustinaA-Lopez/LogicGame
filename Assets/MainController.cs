@@ -163,7 +163,7 @@ public class MainController : MonoBehaviour
             circulo = Instantiate(circuloObj);
             
            // if (advertenciaBool) 
-            if ((PlayerPrefs.GetInt("PUNTOS", Text.points) % 10 <= 3)==true && noPaso)
+            if (Text.points % 10 <= 3 == true && noPaso)
             {
                 advertencia = Instantiate(AdvertenciaObj);
                 panel = GameObject.FindGameObjectWithTag("panel");
