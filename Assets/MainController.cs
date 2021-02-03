@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Advertisements;
 
 public class MainController : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class MainController : MonoBehaviour
     int number, asciiLetter;
     string pregunta;
 
+    // Ads Information
+    string gameId = "4000239";
+    bool testMode = false;
 
     //public GameObject timeObj;
     //public static int vidas=10;
@@ -34,6 +38,9 @@ public class MainController : MonoBehaviour
         instanciadorNivel = false;
         clickOn = true;
         MenuButton = false;
+
+        // Inicializacion publicidad
+        Advertisement.Initialize(gameId, testMode);
     }
 
     // Update is called once per frame
@@ -100,6 +107,12 @@ public class MainController : MonoBehaviour
 
             rightAnswer = false;
             instanciadorNivel = false;
+
+            // Mostrar publicidad
+            if (Advertisement.IsReady())
+            {
+                Advertisement.Show();
+            } 
         }
 
 
