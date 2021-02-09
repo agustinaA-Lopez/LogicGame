@@ -33,8 +33,11 @@ public class ventanaController : MonoBehaviour
                 MainController.instanciadorNivel = false;
                 
                 // sonido right answer
-                GameObject rightAnswerSound = Instantiate(rightAnswerSoundObj);
-                rightAnswerSound.GetComponent<AudioSource>().Play();
+                if (!MainController.silenceGame)
+                {
+                    GameObject rightAnswerSound = Instantiate(rightAnswerSoundObj);
+                    rightAnswerSound.GetComponent<AudioSource>().Play();
+                }
 
             }
         } 
@@ -55,9 +58,12 @@ public class ventanaController : MonoBehaviour
                 MainController.instanciadorNivel = false;
 
                 //wrongAnswer Sound
-            GameObject wrongAnswerSound = Instantiate(wrongAnswerSoundObj);    
-            wrongAnswerSound.GetComponent<AudioSource>().Play();
-            Vibration.Vibrate(21);
+                if (!MainController.silenceGame)
+                {
+                    GameObject wrongAnswerSound = Instantiate(wrongAnswerSoundObj);    
+                    wrongAnswerSound.GetComponent<AudioSource>().Play();
+                    Vibration.Vibrate(21);
+                }
             }
         }
         MainController.instanciadorNivel = false;
