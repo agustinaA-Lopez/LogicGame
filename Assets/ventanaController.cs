@@ -6,6 +6,7 @@ public class ventanaController : MonoBehaviour
 {
 
     GameObject objClone, wrongAnswer;
+    public GameObject rightAnswerSoundObj, wrongAnswerSoundObj;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,11 @@ public class ventanaController : MonoBehaviour
                 Text.tiempoRespuesta = 60;
                 Text.points += 3;
                 MainController.instanciadorNivel = false;
+                
+                // sonido right answer
+                GameObject rightAnswerSound = Instantiate(rightAnswerSoundObj);
+                rightAnswerSound.GetComponent<AudioSource>().Play();
+
             }
         } 
          
@@ -47,7 +53,13 @@ public class ventanaController : MonoBehaviour
                 Text.tiempoRespuesta = 60;
                 Text.points -= 2;
                 MainController.instanciadorNivel = false;
+
+                //wrongAnswer Sound
+            GameObject wrongAnswerSound = Instantiate(wrongAnswerSoundObj);    
+            wrongAnswerSound.GetComponent<AudioSource>().Play();
+            Vibration.Vibrate(21);
             }
         }
+        MainController.instanciadorNivel = false;
     }
 }

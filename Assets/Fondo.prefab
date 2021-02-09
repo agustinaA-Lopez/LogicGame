@@ -535,6 +535,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389bf7004bbfa00458e0e9375cf08731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rightAnswerSoundObj: {fileID: 4923571592265463866, guid: accacfcdc6ef6104887567f3dc901b3f, type: 3}
+  wrongAnswerSoundObj: {fileID: 8121777175877548119, guid: 12165e9ca91cd4b4e96f03d2e5c408a3, type: 3}
 --- !u!212 &4914679482605506448
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1682,6 +1684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rend: {fileID: 0}
   ClickOnSoundObj: {fileID: 8930233890023826990, guid: 29cedde1809a6254184db187424386ca, type: 3}
+  CickOffSoundObj: {fileID: 0}
 --- !u!1 &7537653296712828481
 GameObject:
   m_ObjectHideFlags: 0
