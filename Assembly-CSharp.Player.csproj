@@ -71,6 +71,7 @@
     <Compile Include="Assets\Buttons\HelpButtonController.cs" />
     <Compile Include="Assets\Respuestas\respuestasController.cs" />
     <Compile Include="Assets\Buttons\silenceMusicButton.cs" />
+    <Compile Include="Assets\Buttons\RestartButtonController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -669,9 +670,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UnityEngine.Monetization.csproj">
+      <Project>{734EB7BD-0DB6-F128-72BA-2355422B0EB4}</Project>
+      <Name>UnityEngine.Monetization</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
       <Project>{B5E246B5-D3FF-CD22-7708-021B492256CC}</Project>
       <Name>Unity.2D.Animation.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.Advertisements.csproj">
+      <Project>{9B64C6ED-8315-58BF-DFD4-D7F09347AF76}</Project>
+      <Name>UnityEngine.Advertisements</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{E34D2273-8F07-40B0-FA17-FED5025F4A59}</Project>

@@ -5,12 +5,12 @@ using UnityEngine.Advertisements;
 
 public class MainController : MonoBehaviour
 {
-    public GameObject inicioObj, circuloObj, fondoObj, MenuObj, AdvertenciaObj;
+    public GameObject inicioObj, circuloObj, fondoObj, MenuObj, AdvertenciaObj, ContinuarObje;
     public static bool clickOn, silenceMusic, silenceGame, rightAnswer, MenuButton, backButton, advertenciaBool;
     public static int nivel, respuesta;
     public static float tiempo;
     //public static int nivel;
-    private GameObject circulo, fondo, menu, level, advertencia, panel;
+    private GameObject circulo, fondo, menu, level, advertencia, panel, continuar;
 
 
     public static float tiempoRespuesta = 30;
@@ -54,8 +54,20 @@ public class MainController : MonoBehaviour
         }
 
         //DESCOMENTAR PARA JUGAR EL JUEGO DESDE EL PRINCIPIO
-       /* PlayerPrefs.SetInt("NIVEL", 0);
+    /*    PlayerPrefs.SetInt("NIVEL", 0);
         PlayerPrefs.SetInt("PUNTOS", 0);*/
+
+
+
+        //para instanciar a Continuar
+        if (clickOn && (PlayerPrefs.GetInt("NIVEL") > 0) && nivel == 0)
+        {
+            continuar = Instantiate(ContinuarObje);
+        }
+        if (nivel != 0) Destroy(continuar);
+        //
+
+
 
         if (MenuButton)
         {
