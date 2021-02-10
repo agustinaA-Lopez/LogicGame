@@ -78,7 +78,12 @@ public class MainController : MonoBehaviour
             menu = Instantiate(MenuObj);
             MenuButton = false;
         }
-
+        //lo de abajo lo puse de tal forma que si lo apretas salta de nivel
+        if (Input.GetKeyDown("n"))
+        { nivel++;
+          Debug.Log(nivel);
+                }
+        //
 
         if (backButton)
         {
