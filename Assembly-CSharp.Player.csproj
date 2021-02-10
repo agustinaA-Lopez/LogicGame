@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ventanaController.cs" />
+    <Compile Include="Assets\Buttons\RestartButtonController.cs" />
     <Compile Include="Assets\Buttons\MenuButtonController.cs" />
     <Compile Include="Assets\GuardadorNivel.cs" />
     <Compile Include="Assets\Buttons\PlayButtonController.cs" />
@@ -71,7 +72,6 @@
     <Compile Include="Assets\Buttons\HelpButtonController.cs" />
     <Compile Include="Assets\Respuestas\respuestasController.cs" />
     <Compile Include="Assets\Buttons\silenceMusicButton.cs" />
-    <Compile Include="Assets\Buttons\RestartButtonController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
