@@ -59,7 +59,9 @@ public class RestartButtonController: MonoBehaviour
            {
                 MainController.nivel = PlayerPrefs.GetInt("NIVEL", MainController.nivel);
                 Text.points = PlayerPrefs.GetInt("PUNTOS", Text.points);
-           } else MainController.nivel =1;
+           } 
+           if (MainController.nivel == 32) {MainController.nivel =0; Text.points = 0;}
+           else MainController.nivel =1;
             //MainController.nivel ++;
             click = false;
 

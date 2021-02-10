@@ -9,6 +9,7 @@ public class AdvertenciaController: MonoBehaviour
     void Update()
     {
         if (MainController.nivel == 1) {GetComponent<TMPro.TextMeshProUGUI>().text = "move the wheel to find the missing piece\n & check on the right answer"; GetComponent<TMPro.TextMeshProUGUI>().fontSize = 155;}
+        if (MainController.nivel == 32){GetComponent<TMPro.TextMeshProUGUI>().text = "Congrats!! You've finished with "+ Text.points + " Points!";}
 
         if (Text.points <= 3 && MainController.nivel != 1) {GetComponent<TMPro.TextMeshProUGUI>().text = "90% of people get 10 points"; MainController.noPaso= false;}
 

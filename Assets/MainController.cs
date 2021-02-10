@@ -5,12 +5,12 @@ using UnityEngine.Advertisements;
 
 public class MainController : MonoBehaviour
 {
-    public GameObject inicioObj, circuloObj, fondoObj, MenuObj, AdvertenciaObj, ContinuarObje;
+    public GameObject inicioObj, circuloObj, fondoObj, MenuObj, AdvertenciaObj, FireWorksObj, ContinuarObje, playAgainObj;
     public static bool clickOn, silenceMusic, silenceGame, rightAnswer, MenuButton, backButton, advertenciaBool;
     public static int nivel, respuesta;
-    public static float tiempo;
+    public static float tiempo, fireDelay, fireTimer;
     //public static int nivel;
-    private GameObject circulo, fondo, menu, level, advertencia, panel, continuar;
+    private GameObject circulo, fondo, menu, level, advertencia, panel, continuar, playAgain, fireWorks;
 
 
     public static float tiempoRespuesta = 30;
@@ -32,8 +32,7 @@ public class MainController : MonoBehaviour
     void Start()
     {
         //Lo de abajo sirve para seguir jugando en el nivel en que estaba
-        
-
+       // fireTimer = 0;
         silenceMusic = false;
         instanciadorNivel = false;
         clickOn = true;
@@ -80,7 +79,8 @@ public class MainController : MonoBehaviour
         }
         //lo de abajo lo puse de tal forma que si lo apretas salta de nivel
         if (Input.GetKeyDown("n"))
-        { nivel++;
+        { clickOn = true;
+            nivel++;
           Debug.Log(nivel);
                 }
         //
@@ -144,7 +144,7 @@ public class MainController : MonoBehaviour
 
         // advertencia Cartel
         if (nivel == 1 && Text.tiempoRespuesta < 55 || respuestasController.click) { Destroy(advertencia); respuestasController.click = false; }
-        if (nivel != 1 && Text.tiempoRespuesta < 57) Destroy(advertencia);
+        if ((nivel != 1 && Text.tiempoRespuesta < 57) || nivel == 0) Destroy(advertencia);
 
         if (Text.points % 10 > 3 && Text.points % 10 <= 9) noPaso = true;
 
@@ -167,15 +167,19 @@ public class MainController : MonoBehaviour
             }
 
         }
+        if (fireTimer>0) fireTimer -= Time.deltaTime;
+        if (fireTimer < 0) {fireWorks = Instantiate(FireWorksObj); fireTimer = Random.Range(.5f,1.5f);}
     }
     //Controla los niveles
     void Level()
     {
-
+        fireTimer = 0;
         Destroy(level);
         Destroy(circulo);
         Destroy(menu);
         Destroy(fondo);
+        Destroy (playAgain);
+        Destroy(fireWorks);
 
        /* if (PlayerPrefs.GetInt("PUNTOS", Text.points) % 10 <= 3 && noPaso)
         {
@@ -183,28 +187,36 @@ public class MainController : MonoBehaviour
         }*/
 
 
-        if (nivel >0)
+        if (nivel >0 && nivel < 32)
         {
             fondo = Instantiate(fondoObj);
             circulo = Instantiate(circuloObj);
             
            // if (advertenciaBool) 
-            if (Text.points % 10 <= 3 == true && noPaso)
+
+        }
+        if ((nivel > 0  && Text.points % 10 <= 3 == true && noPaso) || (nivel == 32 && advertencia == null))
             {
                 advertencia = Instantiate(AdvertenciaObj);
                 panel = GameObject.FindGameObjectWithTag("panel");
-                if (nivel > 1) panel.transform.localScale = new Vector3(1F, .5f, 0);
+                if (nivel > 1 && nivel <32) panel.transform.localScale = new Vector3(1F, .5f, 0);
                 advertenciaBool = false;
             }
-
-        }
             // INSTANCIAMOS PREGUNTA SEGUN NIVEL
             
             pregunta = "p" + nivel.ToString();
             if (nivel==0) {level = Instantiate(inicioObj); advertenciaBool = true;}
+            else if (nivel == 32) 
+            {
+                if (playAgain == null) playAgain = Instantiate(playAgainObj);
+                fireWorks = Instantiate (FireWorksObj); 
+                fireTimer = Random.Range(.5f,1.5f);
+            }
+
             else level = Instantiate(Resources.Load(pregunta, typeof(GameObject))) as GameObject;
 
  }
+
 
 }
 
