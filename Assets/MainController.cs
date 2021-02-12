@@ -14,12 +14,13 @@ public class MainController : MonoBehaviour
 
 
     public static float tiempoRespuesta = 30;
-    public static bool instanciar = true;
+    public static bool instanciar= true;
     public static bool noPaso = true;
     public static bool instanciadorNivel;
     public static int puntosViejos=0;
     int number, asciiLetter;
     string pregunta;
+    bool MenuBool, paso;
 
     // Ads Information
     string gameId = "4000239";
@@ -57,11 +58,12 @@ public class MainController : MonoBehaviour
          PlayerPrefs.SetInt("PUNTOS", 0);*/
 
         //para instanciar a Continuar
-        if (clickOn && (PlayerPrefs.GetInt("NIVEL") > 0) && nivel == 0)
+        if ((PlayerPrefs.GetInt("NIVEL") > 0) && nivel == 0&&!MenuBool&&!paso)
         {
             continuar = Instantiate(ContinuarObje);
+            paso = true;
         }
-        if (nivel != 0) Destroy(continuar);
+        if (nivel != 0||MenuBool) Destroy(continuar);
         //
 
         if (MenuButton)
@@ -76,7 +78,9 @@ public class MainController : MonoBehaviour
             level.SetActive(false);
             menu = Instantiate(MenuObj);
             MenuButton = false;
+            MenuBool = true;
         }
+
         //lo de abajo lo puse de tal forma que si lo apretas salta de nivel
         if (Input.GetKeyDown("n"))
         { clickOn = true;
@@ -97,7 +101,8 @@ public class MainController : MonoBehaviour
 
             level.SetActive(true);
             backButton = false;
-
+            MenuBool = false;
+            paso = false;
         }
 
 
