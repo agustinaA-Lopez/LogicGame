@@ -20,7 +20,7 @@ public class MainController : MonoBehaviour
     public static int puntosViejos=0;
     int number, asciiLetter;
     string pregunta;
-    bool MenuBool, paso;
+   // bool paso; //MenuBool,
 
     // Ads Information
     string gameId = "4000239";
@@ -57,18 +57,19 @@ public class MainController : MonoBehaviour
         /* PlayerPrefs.SetInt("NIVEL", 0);
          PlayerPrefs.SetInt("PUNTOS", 0);*/
 
-        //para instanciar a Continuar
-        if ((PlayerPrefs.GetInt("NIVEL") > 0) && nivel == 0&&!MenuBool&&!paso)
+        //para instanciar a Continuar           
+      /* if ((PlayerPrefs.GetInt("NIVEL") > 0) && nivel == 0) //&&!MenuBool &&!paso
         {
             continuar = Instantiate(ContinuarObje);
-            paso = true;
+           // paso = true;
         }
-        if (nivel != 0||MenuBool) Destroy(continuar);
+        //if (nivel != 0) Destroy(continuar); //||MenuBool*/
         //
 
         if (MenuButton)
         {
             Destroy(advertencia);
+            if (continuar != null) continuar.SetActive(false);
             if (nivel > 0)
             {
                 circulo.SetActive(false);
@@ -78,7 +79,7 @@ public class MainController : MonoBehaviour
             level.SetActive(false);
             menu = Instantiate(MenuObj);
             MenuButton = false;
-            MenuBool = true;
+            //MenuBool = true;
         }
 
         //lo de abajo lo puse de tal forma que si lo apretas salta de nivel
@@ -92,6 +93,7 @@ public class MainController : MonoBehaviour
         if (backButton)
         {
             Destroy(menu);
+            if (continuar != null) continuar.SetActive(true);
 
             if (nivel > 0)
             {
@@ -101,8 +103,8 @@ public class MainController : MonoBehaviour
 
             level.SetActive(true);
             backButton = false;
-            MenuBool = false;
-            paso = false;
+            //MenuBool = false;
+            //paso = false;
         }
 
 
@@ -185,6 +187,7 @@ public class MainController : MonoBehaviour
         Destroy(fondo);
         Destroy (playAgain);
         Destroy(fireWorks);
+        Destroy(continuar);
 
        /* if (PlayerPrefs.GetInt("PUNTOS", Text.points) % 10 <= 3 && noPaso)
         {
@@ -210,7 +213,13 @@ public class MainController : MonoBehaviour
             // INSTANCIAMOS PREGUNTA SEGUN NIVEL
             
             pregunta = "p" + nivel.ToString();
-            if (nivel==0) {level = Instantiate(inicioObj); advertenciaBool = true;}
+            if (nivel==0)
+            {
+                level = Instantiate(inicioObj); advertenciaBool = true;
+
+                if ((PlayerPrefs.GetInt("NIVEL") > 0)) continuar = Instantiate(ContinuarObje);
+            }
+
             else if (nivel == 32) 
             {
                 if (playAgain == null) playAgain = Instantiate(playAgainObj);
