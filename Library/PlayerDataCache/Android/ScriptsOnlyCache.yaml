@@ -35,6 +35,9 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.Advertisements.dll:
+    - UnityEngine.Advertisements.Placeholder
+    - UnityEngine.Advertisements.Platform.Editor.BannerPlaceholder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -70,53 +73,53 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11900}
+      Script: {instanceID: 11852}
     - Class: 114
-      Script: {instanceID: 11918}
+      Script: {instanceID: 11864}
     - Class: 114
-      Script: {instanceID: 12236}
+      Script: {instanceID: 11882}
+    - Class: 114
+      Script: {instanceID: 12200}
+    - Class: 114
+      Script: {instanceID: 12238}
     - Class: 114
       Script: {instanceID: 12272}
     - Class: 114
-      Script: {instanceID: 12306}
+      Script: {instanceID: 13020}
     - Class: 114
-      Script: {instanceID: 13054}
+      Script: {instanceID: 13022}
     - Class: 114
       Script: {instanceID: 13056}
     - Class: 114
-      Script: {instanceID: 13090}
+      Script: {instanceID: 13082}
     - Class: 114
-      Script: {instanceID: 13116}
+      Script: {instanceID: 13156}
     - Class: 114
-      Script: {instanceID: 13190}
+      Script: {instanceID: 13556}
     - Class: 114
-      Script: {instanceID: 13590}
+      Script: {instanceID: 13660}
     - Class: 114
-      Script: {instanceID: 13694}
+      Script: {instanceID: 13976}
     - Class: 114
-      Script: {instanceID: 14008}
+      Script: {instanceID: 14026}
     - Class: 114
-      Script: {instanceID: 14056}
+      Script: {instanceID: 14260}
     - Class: 114
-      Script: {instanceID: 14290}
+      Script: {instanceID: 14264}
     - Class: 114
-      Script: {instanceID: 14294}
+      Script: {instanceID: 14284}
     - Class: 114
-      Script: {instanceID: 14314}
+      Script: {instanceID: 14624}
     - Class: 114
-      Script: {instanceID: 14654}
+      Script: {instanceID: 15054}
     - Class: 114
-      Script: {instanceID: 14766}
+      Script: {instanceID: 15278}
     - Class: 114
-      Script: {instanceID: 15086}
+      Script: {instanceID: 15332}
     - Class: 114
-      Script: {instanceID: 15310}
+      Script: {instanceID: 15416}
     - Class: 114
-      Script: {instanceID: 15364}
-    - Class: 114
-      Script: {instanceID: 15448}
-    - Class: 114
-      Script: {instanceID: 15476}
+      Script: {instanceID: 15444}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 123
@@ -146,6 +149,12 @@ ScriptsOnlyBuild:
     - Class: 331
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: ae83e830e7a90c0aff918c4c2e520825
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GraphicRaycaster
   - hash:
       serializedVersion: 2
       Hash: b8fac65e8e3f373693e84100a5d918d5
@@ -604,12 +613,6 @@ ScriptsOnlyBuild:
     className: ApplicationQuit
   - hash:
       serializedVersion: 2
-      Hash: ae83e830e7a90c0aff918c4c2e520825
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: GraphicRaycaster
-  - hash:
-      serializedVersion: 2
       Hash: 8e6ceabfd38a184413d69b7db56c89cc
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -749,4 +752,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/new project.unity
-  playerPath: C:/Users/carra/Desktop/Brain Turner.apk
+  playerPath: C:/Users/juanf/Desktop/LogicGame.apk
