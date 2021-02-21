@@ -24,15 +24,33 @@ public class BackButtonController : MonoBehaviour
     void OnMouseDown()
     {
         //sound on click
-        if (!MainController.silenceGame) 
+        if (!MainController.silenceGame)
         {
             GameObject clickOnSound = Instantiate(ClickOnSoundObj);
             clickOnSound.GetComponent<AudioSource>().Play();
             Vibration.Vibrate(1);
         }
-        
+
+        //para ir a juego nuevo
+        PlayerPrefs.SetInt("NIVEL", 0);
+        PlayerPrefs.SetInt("PUNTOS", 0);
+
         click = true;
+
     }
+
+    //void OnMouseDown()
+    //{
+    //    //sound on click
+    //    if (!MainController.silenceGame) 
+    //    {
+    //        GameObject clickOnSound = Instantiate(ClickOnSoundObj);
+    //        clickOnSound.GetComponent<AudioSource>().Play();
+    //        Vibration.Vibrate(1);
+    //    }
+        
+    //    click = true;
+    //}
 
     //esta funcion chequea cuando entramos al area del boton
     void OnMouseEnter()
