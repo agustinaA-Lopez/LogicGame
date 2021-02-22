@@ -28,6 +28,8 @@ public class RestartButtonController: MonoBehaviour
             //para ir a juego nuevo
             PlayerPrefs.SetInt("NIVEL", 0);
             PlayerPrefs.SetInt("PUNTOS", 0);
+            Text.points = 0;
+            Text.tiempoRespuesta = 59;
         }
 
         click =true;
