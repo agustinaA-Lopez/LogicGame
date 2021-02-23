@@ -57,14 +57,7 @@ public class MainController : MonoBehaviour
         /* PlayerPrefs.SetInt("NIVEL", 0);
          PlayerPrefs.SetInt("PUNTOS", 0);*/
 
-        //para instanciar a Continuar           
-      /* if ((PlayerPrefs.GetInt("NIVEL") > 0) && nivel == 0) //&&!MenuBool &&!paso
-        {
-            continuar = Instantiate(ContinuarObje);
-           // paso = true;
-        }
-        //if (nivel != 0) Destroy(continuar); //||MenuBool*/
-        //
+       
 
         if (MenuButton)
         {
@@ -122,8 +115,11 @@ public class MainController : MonoBehaviour
             Level();
 
             //esto guarda el nivel en que estoy para el proximo juego
-            PlayerPrefs.SetInt("NIVEL", nivel);
-            PlayerPrefs.Save();
+
+                PlayerPrefs.SetInt("NIVEL", nivel);
+                PlayerPrefs.Save();
+            
+            
 
             rightAnswer = false;
             instanciadorNivel = false;
@@ -159,7 +155,7 @@ public class MainController : MonoBehaviour
         //Controla el boton back del celular
         if (Application.platform == RuntimePlatform.Android)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape)|| Input.GetKeyDown("<"))
             
             {
                 Vibration.Vibrate(1);
@@ -172,8 +168,23 @@ public class MainController : MonoBehaviour
 
                 //return;
             }
+         
 
         }
+        if (Input.GetKeyDown("b"))
+        {
+                Vibration.Vibrate(1);
+                // Insert Code Here (I.E. Load Scene, Etc)
+                if (menu != null) backButton = true;
+                else if (nivel != 0) { nivel = 0; Level(); }
+                else Application.Quit();
+                if (advertencia != null) Destroy(advertencia);
+
+
+                //return;
+            }
+
+
         if (fireTimer>0) fireTimer -= Time.deltaTime;
         if (fireTimer < 0) {fireWorks = Instantiate(FireWorksObj); fireTimer = Random.Range(.5f,1.5f);}
     }
@@ -189,10 +200,7 @@ public class MainController : MonoBehaviour
         Destroy(fireWorks);
         Destroy(continuar);
 
-       /* if (PlayerPrefs.GetInt("PUNTOS", Text.points) % 10 <= 3 && noPaso)
-        {
-            MainController.advertenciaBool = true;
-        }*/
+     
 
 
         if (nivel >0 && nivel < 32)
@@ -200,7 +208,6 @@ public class MainController : MonoBehaviour
             fondo = Instantiate(fondoObj);
             circulo = Instantiate(circuloObj);
             
-           // if (advertenciaBool) 
 
         }
         if ((nivel > 0  && Text.points % 10 <= 3 == true && noPaso) || (nivel == 32 && advertencia == null))

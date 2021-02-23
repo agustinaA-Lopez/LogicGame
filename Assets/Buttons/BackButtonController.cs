@@ -32,25 +32,13 @@ public class BackButtonController : MonoBehaviour
         }
 
         //para ir a juego nuevo
-        PlayerPrefs.SetInt("NIVEL", 0);
+       // PlayerPrefs.SetInt("NIVEL", 0);
         PlayerPrefs.SetInt("PUNTOS", 0);
+        
 
         click = true;
 
     }
-
-    //void OnMouseDown()
-    //{
-    //    //sound on click
-    //    if (!MainController.silenceGame) 
-    //    {
-    //        GameObject clickOnSound = Instantiate(ClickOnSoundObj);
-    //        clickOnSound.GetComponent<AudioSource>().Play();
-    //        Vibration.Vibrate(1);
-    //    }
-        
-    //    click = true;
-    //}
 
     //esta funcion chequea cuando entramos al area del boton
     void OnMouseEnter()
@@ -68,7 +56,9 @@ public class BackButtonController : MonoBehaviour
 
         if (rend.material.color.r <= .5F && click)
         {
-            MainController.nivel = NivelPrevio;
+            
+                MainController.nivel = NivelPrevio;
+            
 
             MainController.backButton = true;
 
